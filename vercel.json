@@ -1,13 +1,5 @@
 {
-  "version": 2,
-  "routes": [
-    {
-      "src": "^/$",
-      "dest": "/path.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next"
 }
