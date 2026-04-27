@@ -4,19 +4,19 @@ import { useState, useEffect } from "react";
 import type { PathDetail, Task } from "@/lib/data/path-details";
 
 const ENCOURAGEMENT = [
-  "🎉 Great work! Keep it up!",
-  "💪 You're crushing it!",
-  "🔥 Awesome progress!",
-  "⭐ Fantastic effort!",
-  "🚀 You got this!",
-  "💥 Incredible dedication!",
-  "🏆 Champion mindset!",
-  "✨ Phenomenal work!",
+  "Great work! Keep it up!",
+  "You're crushing it!",
+  "Awesome progress!",
+  "Fantastic effort!",
+  "You got this!",
+  "Incredible dedication!",
+  "Champion mindset!",
+  "Phenomenal work!",
 ];
 
 function confettiBurst() {
   if (typeof window === "undefined") return;
-  const colors = ["#CF7B4B", "#9DC499", "#ede8e2", "#8A5230"];
+  const colors = ["#aaa8ff", "#7f9ef8", "#c1cff8", "#fad0f3"];
   const container = document.createElement("div");
   container.style.cssText =
     "position:fixed;inset:0;pointer-events:none;z-index:9999;overflow:hidden;";
@@ -108,7 +108,7 @@ export default function TaskList({ pathId, pathDetail }: { pathId: string; pathD
         </div>
         {allDone && (
           <p style={{ marginTop: 10, fontSize: 14, color: "var(--fp-green)", fontWeight: 600 }}>
-            🎉 Path complete! Outstanding work.
+            Path complete! Outstanding work.
           </p>
         )}
       </div>
@@ -196,7 +196,7 @@ export default function TaskList({ pathId, pathDetail }: { pathId: string; pathD
           }}
         >
           <p style={{ fontWeight: 700, fontSize: 14, color: "var(--fp-white)", marginBottom: 2 }}>
-            Task complete! 🎊
+            Stage complete!
           </p>
           <p style={{ fontSize: 13, color: "var(--fp-text-muted)" }}>{toast}</p>
         </div>

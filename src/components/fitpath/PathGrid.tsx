@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { Search } from "lucide-react";
 import { PATHS, ALL_PATHS, CATEGORY_LABELS, type PathCategory } from "@/lib/data/paths";
 import PathCard from "./PathCard";
 
@@ -161,7 +162,9 @@ export default function PathGrid() {
         </div>
       ) : (
         <div style={{ textAlign: "center", padding: "60px 0", color: "var(--fp-text-muted)" }}>
-          <p style={{ fontSize: 32, marginBottom: 12 }}>🔍</p>
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
+            <Search size={36} strokeWidth={1} />
+          </div>
           <p style={{ fontSize: 15, fontWeight: 500, color: "var(--fp-text)", marginBottom: 6 }}>
             No paths found
           </p>

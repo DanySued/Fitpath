@@ -93,7 +93,7 @@ export default function FeatureCarousel() {
         <div
           className="flex-none w-72 snap-start rounded-2xl overflow-hidden flex items-end p-7"
           style={{
-            background: "linear-gradient(160deg, rgba(207,123,75,0.6) 0%, var(--fp-black) 70%)",
+            background: "linear-gradient(160deg, rgba(170,168,255,0.35) 0%, var(--fp-black) 70%)",
             border: "1px solid var(--fp-border)",
             minHeight: "340px",
           }}
@@ -101,7 +101,7 @@ export default function FeatureCarousel() {
           <div>
             <p
               className="text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: "rgba(212,204,196,0.6)" }}
+              style={{ color: "rgba(255,255,255,0.5)" }}
             >
               Ready to start?
             </p>
@@ -114,7 +114,7 @@ export default function FeatureCarousel() {
             <Link
               href="/paths"
               className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl transition-opacity hover:opacity-80"
-              style={{ backgroundColor: "var(--fp-accent)", color: "#1a1714" }}
+              style={{ backgroundColor: "var(--fp-accent)", color: "var(--fp-black)" }}
             >
               Browse paths
             </Link>

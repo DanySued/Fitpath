@@ -66,7 +66,7 @@ export default function Hero() {
           <Link
             href="/paths"
             className="inline-flex items-center px-8 py-3.5 text-sm font-semibold rounded-xl transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
-            style={{ backgroundColor: "var(--fp-accent)", color: "#1a1714" }}
+            style={{ backgroundColor: "var(--fp-accent)", color: "var(--fp-black)" }}
           >
             Browse Paths
           </Link>

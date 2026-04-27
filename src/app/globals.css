@@ -45,7 +45,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) * 1.4);
 
-  /* FitPath brand tokens exposed to Tailwind */
+  /* FitPath/Nextsense brand tokens */
   --color-fp-black:      var(--fp-black);
   --color-fp-surface:    var(--fp-surface);
   --color-fp-surface-2:  var(--fp-surface-2);
@@ -59,53 +59,55 @@
 }
 
 :root {
-  /* shadcn base — mapped dark so body bg = fp-black */
-  --background: #1a1714;
-  --foreground: #d4ccc4;
-  --card: #211c18;
-  --card-foreground: #d4ccc4;
-  --popover: #211c18;
-  --popover-foreground: #d4ccc4;
-  --primary: #cf7b4b;
-  --primary-foreground: #1a1714;
-  --secondary: #2a2420;
-  --secondary-foreground: #d4ccc4;
-  --muted: #2a2420;
-  --muted-foreground: #8a7f76;
-  --accent: #cf7b4b;
-  --accent-foreground: #1a1714;
+  /* shadcn base — dark Nextsense theme */
+  --background: #030203;
+  --foreground: rgba(255,255,255,0.81);
+  --card: #2b2e3f;
+  --card-foreground: rgba(255,255,255,0.81);
+  --popover: #2b2e3f;
+  --popover-foreground: rgba(255,255,255,0.81);
+  --primary: #aaa8ff;
+  --primary-foreground: #030203;
+  --secondary: #2b2e3f;
+  --secondary-foreground: rgba(255,255,255,0.81);
+  --muted: #2b2e3f;
+  --muted-foreground: rgba(255,255,255,0.45);
+  --accent: #aaa8ff;
+  --accent-foreground: #030203;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #3d3028;
-  --input: #3d3028;
-  --ring: #cf7b4b;
-  --chart-1: #cf7b4b;
-  --chart-2: #9dc499;
-  --chart-3: #bc8cff;
-  --chart-4: #8a7f76;
-  --chart-5: #d4ccc4;
+  --border: rgba(255,255,255,0.08);
+  --input: rgba(255,255,255,0.08);
+  --ring: #aaa8ff;
+  --chart-1: #aaa8ff;
+  --chart-2: #7f9ef8;
+  --chart-3: #c1cff8;
+  --chart-4: #fad0f3;
+  --chart-5: #fffba5;
   --radius: 0.875rem;
-  --sidebar: #211c18;
-  --sidebar-foreground: #d4ccc4;
-  --sidebar-primary: #cf7b4b;
-  --sidebar-primary-foreground: #1a1714;
-  --sidebar-accent: #2a2420;
-  --sidebar-accent-foreground: #d4ccc4;
-  --sidebar-border: #3d3028;
-  --sidebar-ring: #cf7b4b;
+  --sidebar: #2b2e3f;
+  --sidebar-foreground: rgba(255,255,255,0.81);
+  --sidebar-primary: #aaa8ff;
+  --sidebar-primary-foreground: #030203;
+  --sidebar-accent: rgba(255,255,255,0.05);
+  --sidebar-accent-foreground: rgba(255,255,255,0.81);
+  --sidebar-border: rgba(255,255,255,0.08);
+  --sidebar-ring: #aaa8ff;
 
-  /* FitPath brand palette */
-  --fp-black:      #1a1714;
-  --fp-surface:    #211c18;
-  --fp-surface-2:  #2a2420;
-  --fp-white:      #ede8e2;
-  --fp-accent:     #cf7b4b;
-  --fp-accent-2:   #8a5230;
-  --fp-green:      #9dc499;
-  --fp-purple:     #bc8cff;
-  --fp-text:       #d4ccc4;
-  --fp-text-muted: #8a7f76;
-  --fp-border:     #3d3028;
-  --fp-border-2:   #4a3a2e;
+  /* Nextsense brand palette (as fp- variables) */
+  --fp-black:      #030203;
+  --fp-surface:    #111318;
+  --fp-surface-2:  #2b2e3f;
+  --fp-white:      #ffffff;
+  --fp-accent:     #aaa8ff;   /* ns-lavender */
+  --fp-accent-2:   #6b69cc;
+  --fp-green:      #7f9ef8;   /* ns-berry */
+  --fp-purple:     #c1cff8;   /* ns-periwinckle */
+  --fp-blush:      #fad0f3;
+  --fp-yellow:     #fffba5;
+  --fp-text:       rgba(255,255,255,0.81);
+  --fp-text-muted: rgba(255,255,255,0.45);
+  --fp-border:     rgba(255,255,255,0.08);
+  --fp-border-2:   rgba(255,255,255,0.14);
 
   /* Layout */
   --fp-container:    90rem;
@@ -158,13 +160,13 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1.25rem;
-  color: var(--fp-accent);
+  color: var(--fp-green);
 }
 
-/* Keep ns- aliases so copied components still work */
+/* ns- aliases so copied components still work */
 .ns-container { max-width: var(--fp-container); margin-inline: auto; padding-inline: var(--fp-container-px); }
 .ns-section   { padding-block: var(--fp-section-py); }
-.ns-eyebrow   { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem; color: var(--fp-accent); }
+.ns-eyebrow   { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem; color: var(--fp-green); }
 
 /* Marquee animation */
 @keyframes marquee {

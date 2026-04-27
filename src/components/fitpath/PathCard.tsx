@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import PathIcon from "./PathIcon";
 import type { Path } from "@/lib/data/paths";
 
 export default function PathCard({ path }: { path: Path }) {
@@ -47,8 +48,6 @@ export default function PathCard({ path }: { path: Path }) {
       <div style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
         <div
           style={{
-            fontSize: 28,
-            lineHeight: 1,
             width: 48,
             height: 48,
             borderRadius: 12,
@@ -58,9 +57,10 @@ export default function PathCard({ path }: { path: Path }) {
             justifyContent: "center",
             flexShrink: 0,
             border: `1px solid ${path.color}30`,
+            color: path.color,
           }}
         >
-          {path.icon}
+          <PathIcon name={path.icon} size={22} strokeWidth={1.5} />
         </div>
 
         <div style={{ flex: 1, minWidth: 0 }}>

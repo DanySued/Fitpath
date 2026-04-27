@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { Wrench } from "lucide-react";
 import Nav from "@/components/sections/Nav";
 import Footer from "@/components/sections/Footer";
 import TaskList from "@/components/fitpath/TaskList";
+import PathIcon from "@/components/fitpath/PathIcon";
 import { ALL_PATHS } from "@/lib/data/paths";
 import { PATH_DATA } from "@/lib/data/path-details";
 
@@ -87,11 +89,11 @@ export default async function PathDetailPage({ params }: Props) {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: 32,
+                  color: pathMeta.color,
                   flexShrink: 0,
                 }}
               >
-                {pathMeta.icon}
+                <PathIcon name={pathMeta.icon} size={30} strokeWidth={1.5} />
               </div>
               <div>
                 <h1
@@ -126,7 +128,9 @@ export default async function PathDetailPage({ params }: Props) {
                   borderRadius: 20,
                 }}
               >
-                <p style={{ fontSize: 48, marginBottom: 16 }}>🛠️</p>
+                <div style={{ display: "flex", justifyContent: "center", marginBottom: 16, color: "var(--fp-text-muted)" }}>
+                  <Wrench size={48} strokeWidth={1} />
+                </div>
                 <h2
                   style={{
                     fontSize: 22,
@@ -150,7 +154,7 @@ export default async function PathDetailPage({ params }: Props) {
                     padding: "10px 20px",
                     borderRadius: 10,
                     background: "var(--fp-accent)",
-                    color: "#1a1714",
+                    color: "var(--fp-black)",
                     fontSize: 14,
                     fontWeight: 600,
                     transition: "opacity 0.15s",

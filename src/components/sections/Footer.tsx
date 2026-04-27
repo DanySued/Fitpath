@@ -35,7 +35,7 @@ export default function Footer() {
           <Link
             href="/paths"
             className="inline-flex items-center px-8 py-4 rounded-xl font-semibold transition-all duration-200 hover:opacity-90 shrink-0"
-            style={{ backgroundColor: "var(--fp-accent)", color: "#1a1714" }}
+            style={{ backgroundColor: "var(--fp-accent)", color: "var(--fp-black)" }}
           >
             Browse Paths
           </Link>

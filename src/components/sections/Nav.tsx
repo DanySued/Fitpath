@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Dumbbell } from "lucide-react";
 
 const NAV_ITEMS = [
   { label: "Paths", href: "/paths" },
@@ -26,7 +27,7 @@ export default function Nav() {
     <header
       className="fixed top-11 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        backgroundColor: scrolled ? "rgba(26,23,20,0.95)" : "transparent",
+        backgroundColor: scrolled ? "rgba(3,2,3,0.92)" : "transparent",
         backdropFilter: scrolled ? "blur(12px)" : "none",
         borderBottom: scrolled ? "1px solid var(--fp-border)" : "none",
       }}
@@ -46,10 +47,10 @@ export default function Nav() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: 16,
+              color: "var(--fp-black)",
             }}
           >
-            💪
+            <Dumbbell size={18} strokeWidth={2} />
           </div>
           <span
             style={{
@@ -83,7 +84,7 @@ export default function Nav() {
           <Link
             href="/paths"
             className="hidden md:inline-flex items-center px-5 py-2 text-sm font-semibold rounded-xl transition-all duration-200 hover:opacity-90 active:scale-95"
-            style={{ backgroundColor: "var(--fp-accent)", color: "#1a1714" }}
+            style={{ backgroundColor: "var(--fp-accent)", color: "var(--fp-black)" }}
           >
             Browse Paths
           </Link>
@@ -106,7 +107,7 @@ export default function Nav() {
         <div
           className="md:hidden border-t"
           style={{
-            backgroundColor: "rgba(26,23,20,0.97)",
+            backgroundColor: "rgba(3,2,3,0.97)",
             backdropFilter: "blur(12px)",
             borderColor: "var(--fp-border)",
           }}
@@ -126,7 +127,7 @@ export default function Nav() {
             <Link
               href="/paths"
               className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-xl w-full"
-              style={{ backgroundColor: "var(--fp-accent)", color: "#1a1714" }}
+              style={{ backgroundColor: "var(--fp-accent)", color: "var(--fp-black)" }}
               onClick={() => setMenuOpen(false)}
             >
               Browse Paths
