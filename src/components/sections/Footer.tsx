@@ -14,16 +14,16 @@ const links: Record<string, { label: string; href: string }[]> = {
     { label: "Flexibility", href: "/paths/flexibility" },
   ],
   Resources: [
-    { label: "Best Practices", href: "/paths" },
-    { label: "Guides", href: "/paths" },
-    { label: "Videos", href: "/paths" },
+    { label: "Guides", href: "/guides" },
+    { label: "Videos", href: "/videos" },
+    { label: "All Paths", href: "/paths" },
     { label: "FAQ", href: "/#faq" },
   ],
   Project: [
-    { label: "About", href: "/#learn" },
-    { label: "Changelog", href: "/paths" },
+    { label: "About", href: "/about" },
     { label: "GitHub", href: "https://github.com/DanySued/roadmap" },
-    { label: "Privacy", href: "#" },
+    { label: "Privacy", href: "/privacy" },
+    { label: "Terms", href: "/terms" },
   ],
 };
 
@@ -99,8 +99,8 @@ export default function Footer() {
             style={{ borderTop: "1px solid var(--fp-border)" }}
           >
             <div className="flex gap-6 text-xs" style={{ color: "var(--fp-text-muted)" }}>
-              <Link href="#" className="hover:opacity-70 transition-opacity">Privacy Policy</Link>
-              <Link href="#" className="hover:opacity-70 transition-opacity">Terms of Service</Link>
+              <Link href="/privacy" className="hover:opacity-70 transition-opacity">Privacy Policy</Link>
+              <Link href="/terms" className="hover:opacity-70 transition-opacity">Terms of Service</Link>
               <span>© 2026 FitPath — Built by Dany Sue</span>
             </div>
           </div>

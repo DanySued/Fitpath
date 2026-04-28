@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import AnnouncementBanner from "@/components/sections/AnnouncementBanner";
+import { AuthProvider } from "@/lib/auth-context";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -31,8 +32,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} ${instrumentSerif.variable}`}>
       <body className="min-h-full flex flex-col">
-        <AnnouncementBanner />
-        {children}
+        <AuthProvider>
+          <AnnouncementBanner />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
