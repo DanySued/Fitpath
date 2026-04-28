@@ -81,7 +81,8 @@ export default function Footer() {
                         href={item.href}
                         className="text-sm transition-opacity hover:opacity-100"
                         style={{ color: "var(--fp-text-muted)" }}
-                        {...(item.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                        target={item.href.startsWith("http") ? "_blank" : undefined}
+                        rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                       >
                         {item.label}
                       </Link>
