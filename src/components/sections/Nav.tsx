@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Dumbbell } from "lucide-react";
 
@@ -11,28 +11,10 @@ const NAV_ITEMS = [
 ] as const;
 
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => {
-      const next = window.scrollY > 10;
-      setScrolled((prev) => (prev === next ? prev : next));
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <header
-      className="fixed top-11 left-0 right-0 z-50 transition-all duration-300"
-      style={{
-        backgroundColor: scrolled ? "rgba(3,2,3,0.92)" : "transparent",
-        backdropFilter: scrolled ? "blur(12px)" : "none",
-        borderBottom: scrolled ? "1px solid var(--fp-border)" : "none",
-      }}
-    >
+    <header className="relative z-50">
       <div className="fp-container flex items-center justify-between h-16">
         {/* Logo */}
         <Link

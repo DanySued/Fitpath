@@ -1,17 +1,33 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Hero() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <section
-      className="relative min-h-screen flex flex-col justify-end pb-20 overflow-hidden"
-      style={{ backgroundColor: "var(--fp-black)", paddingTop: "108px" }}
+      className="relative flex flex-col justify-end pb-20 overflow-hidden"
+      style={{
+        backgroundColor: "var(--fp-black)",
+        // 44px banner + 64px nav = 108px of in-flow header above this section
+        minHeight: "calc(100vh - 108px)",
+      }}
     >
-      {/* Background gradient layers */}
+      {/* Background gradient — drifts down slowest (deepest layer) */}
       <div
         className="absolute inset-0"
         style={{
           background:
             "radial-gradient(ellipse 80% 60% at 60% 40%, rgba(207,123,75,0.08) 0%, rgba(26,23,20,0.95) 70%)",
+          transform: `translateY(${scrollY * 0.3}px)`,
         }}
       />
       {/* Orange glow top-right */}
@@ -19,6 +35,7 @@ export default function Hero() {
         className="absolute -top-24 -right-24 w-[600px] h-[600px] rounded-full opacity-15"
         style={{
           background: "radial-gradient(circle, var(--fp-accent) 0%, transparent 70%)",
+          transform: `translateY(${scrollY * 0.22}px)`,
         }}
       />
       {/* Green glow bottom-left */}
@@ -26,11 +43,15 @@ export default function Hero() {
         className="absolute bottom-0 -left-12 w-[400px] h-[400px] rounded-full opacity-10"
         style={{
           background: "radial-gradient(circle, var(--fp-green) 0%, transparent 70%)",
+          transform: `translateY(${scrollY * 0.15}px)`,
         }}
       />
 
-      {/* Decorative visual right */}
-      <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:flex items-center justify-center opacity-20">
+      {/* Decorative circle right */}
+      <div
+        className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:flex items-center justify-center opacity-20"
+        style={{ transform: `translateY(${scrollY * 0.18}px)` }}
+      >
         <div
           className="w-64 h-64 rounded-full"
           style={{
@@ -41,28 +62,82 @@ export default function Hero() {
         />
       </div>
 
-      {/* Content */}
+      {/* Text content — each block on a different layer */}
       <div className="fp-container relative z-10">
-        <p className="fp-eyebrow">Structured fitness for every goal</p>
 
-        <h1
-          className="mb-6 max-w-2xl"
-          style={{ fontSize: "clamp(3rem, 5.6vw, 4rem)", color: "var(--fp-white)" }}
+        {/* Eyebrow — fastest, fades first */}
+        <p
+          className="fp-eyebrow"
+          style={{
+            transform: `translateY(${scrollY * -0.18}px)`,
+            opacity: Math.max(0, 1 - scrollY / 240),
+            willChange: "transform, opacity",
+          }}
+        >
+          Structured fitness for every goal
+        </p>
+
+        {/* H1 line 1 — slowest, gravity anchor */}
+        <span
+          className="block"
+          style={{
+            fontSize: "clamp(3rem, 5.6vw, 4rem)",
+            color: "var(--fp-white)",
+            fontFamily: "var(--font-instrument-serif), serif",
+            fontWeight: 400,
+            lineHeight: 1.05,
+            letterSpacing: "-0.01em",
+            transform: `translateY(${scrollY * 0.04}px)`,
+            willChange: "transform",
+            display: "block",
+          }}
         >
           Train with purpose.
-          <br />
-          <span style={{ fontStyle: "italic" }}>Progress with clarity.</span>
-        </h1>
+        </span>
 
+        {/* H1 line 2 italic — medium speed, separates from line 1 */}
+        <span
+          className="block mb-6"
+          style={{
+            fontSize: "clamp(3rem, 5.6vw, 4rem)",
+            color: "var(--fp-white)",
+            fontStyle: "italic",
+            fontFamily: "var(--font-instrument-serif), serif",
+            fontWeight: 400,
+            lineHeight: 1.05,
+            letterSpacing: "-0.01em",
+            transform: `translateY(${scrollY * -0.09}px)`,
+            willChange: "transform",
+            display: "block",
+          }}
+        >
+          Progress with clarity.
+        </span>
+
+        {/* Subtitle */}
         <p
           className="mb-10 max-w-md leading-relaxed"
-          style={{ color: "rgba(212,204,196,0.75)", fontSize: "0.9375rem" }}
+          style={{
+            color: "rgba(212,204,196,0.75)",
+            fontSize: "0.9375rem",
+            transform: `translateY(${scrollY * -0.14}px)`,
+            opacity: Math.max(0, 1 - scrollY / 320),
+            willChange: "transform, opacity",
+          }}
         >
           24+ curated training paths — from strength to marathon, yoga to CrossFit.
           Each path breaks your goal into progressive stages you can actually follow.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        {/* CTAs */}
+        <div
+          className="flex flex-col sm:flex-row items-start sm:items-center gap-4"
+          style={{
+            transform: `translateY(${scrollY * -0.19}px)`,
+            opacity: Math.max(0, 1 - scrollY / 270),
+            willChange: "transform, opacity",
+          }}
+        >
           <Link
             href="/paths"
             className="inline-flex items-center px-8 py-3.5 text-sm font-semibold rounded-xl transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
@@ -77,15 +152,26 @@ export default function Hero() {
           >
             Learn more
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path
+                d="M3 8h10M9 4l4 4-4 4"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </Link>
         </div>
 
-        {/* Trust bar */}
+        {/* Trust bar — exits scene first */}
         <div
           className="flex flex-wrap items-center gap-6 mt-16 pt-8"
-          style={{ borderTop: "1px solid var(--fp-border)" }}
+          style={{
+            borderTop: "1px solid var(--fp-border)",
+            transform: `translateY(${scrollY * -0.26}px)`,
+            opacity: Math.max(0, 1 - scrollY / 210),
+            willChange: "transform, opacity",
+          }}
         >
           {[
             { label: "Training paths", value: "24+" },
