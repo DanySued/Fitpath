@@ -182,7 +182,17 @@
   padding-block: var(--fp-section-py);
 }
 
-:root.light .hero-deco { display: none; }
+/* Hero gradients: adapt for light mode instead of hiding */
+:root.light .hero-deco:not(.hero-drift-left):not(.hero-drift-right):not(.hero-drift-subtle) {
+  background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(107,105,204,0.12) 0%, transparent 70%) !important;
+}
+:root.light .hero-drift-left  { opacity: 0.4 !important; }
+:root.light .hero-drift-right { opacity: 0.3 !important; }
+:root.light .hero-drift-subtle { opacity: 0.45 !important; }
+:root.light .hero-drift-subtle > div {
+  background: radial-gradient(circle at 40% 40%, rgba(107,105,204,0.28) 0%, transparent 70%) !important;
+  box-shadow: 0 0 120px 40px rgba(107,105,204,0.07) !important;
+}
 
 @media (max-width: 640px) {
   :root {
