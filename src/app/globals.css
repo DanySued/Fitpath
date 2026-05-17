@@ -218,15 +218,15 @@
 /* Hero background orb drift animations */
 @keyframes hero-drift-left {
   from { transform: translateX(0); }
-  to   { transform: translateX(-40px); }
+  to   { transform: translateX(-120px); }
 }
 @keyframes hero-drift-right {
   from { transform: translateX(0); }
-  to   { transform: translateX(28px); }
+  to   { transform: translateX(90px); }
 }
 @keyframes hero-drift-subtle {
   from { transform: translateX(0); }
-  to   { transform: translateX(-20px); }
+  to   { transform: translateX(-70px); }
 }
 
 .hero-drift-left   { animation: hero-drift-left   30s ease-in-out infinite alternate; will-change: transform; }
