@@ -213,14 +213,16 @@ export default function Nav() {
               <>
                 <Link
                   href="/login"
-                  className="text-sm font-medium transition-opacity hover:opacity-100"
+                  className="text-sm font-medium transition-colors duration-200"
                   style={{ color: "var(--fp-text-muted)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--fp-white)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--fp-text-muted)")}
                 >
                   Log in
                 </Link>
                 <Link
                   href="/signup"
-                  className="inline-flex items-center px-5 py-2 text-sm font-semibold rounded-xl transition-all duration-200 hover:opacity-90 active:scale-95"
+                  className="inline-flex items-center px-5 py-2 text-sm font-semibold rounded-xl transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_0_18px_rgba(170,168,255,0.3)] active:scale-95"
                   style={{ backgroundColor: "var(--fp-accent)", color: "var(--fp-black)" }}
                 >
                   Sign up free
@@ -232,7 +234,7 @@ export default function Nav() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden p-2 -mr-2"
+          className="md:hidden p-2 -mr-2 transition-opacity hover:opacity-60"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -298,15 +300,17 @@ export default function Nav() {
                 <>
                   <Link
                     href="/login"
-                    className="text-base font-medium"
-                    style={{ color: "var(--fp-text)" }}
+                    className="text-base font-medium transition-colors duration-200"
+                    style={{ color: "var(--fp-text-muted)" }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = "var(--fp-white)")}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "var(--fp-text-muted)")}
                     onClick={() => setMenuOpen(false)}
                   >
                     Log in
                   </Link>
                   <Link
                     href="/signup"
-                    className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-xl w-full"
+                    className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-xl w-full transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_18px_rgba(170,168,255,0.3)] active:scale-95"
                     style={{ backgroundColor: "var(--fp-accent)", color: "var(--fp-black)" }}
                     onClick={() => setMenuOpen(false)}
                   >

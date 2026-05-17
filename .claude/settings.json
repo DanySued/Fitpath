@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "bash",
+            "command": "s=$(git status --porcelain); if [ -n \"$s\" ]; then git add -A && git commit -m 'auto-push' && git push; fi",
+            "statusMessage": "Auto-pushing to git..."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(npx next *)",
+      "Bash(.\\\\node_modules\\\\.bin\\\\next build *)",
+      "PowerShell(.\\\\node_modules\\\\.bin\\\\next build 2>&1)",
+      "Bash(git *)",
+      "Skill(update-config)",
+      "Bash(python *)",
+      "Bash(npm install *)",
+      "PowerShell(Get-Command *)",
+      "Bash(node *)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$s = git -C 'C:\\Users\\danys\\MyGithubRepos\\fitpath' status --porcelain; if ($s) { git -C 'C:\\Users\\danys\\MyGithubRepos\\fitpath' config user.email 'danysued@gmail.com'; git -C 'C:\\Users\\danys\\MyGithubRepos\\fitpath' config user.name 'DanySued'; git -C 'C:\\Users\\danys\\MyGithubRepos\\fitpath' add -A; git -C 'C:\\Users\\danys\\MyGithubRepos\\fitpath' commit -m 'chore: auto-deploy'; git -C 'C:\\Users\\danys\\MyGithubRepos\\fitpath' push origin master }",
+            "shell": "powershell",
+            "statusMessage": "Deploying to Vercel...",
+            "async": true
+          }
+        ]
+      }
+    ]
+  }
+}
