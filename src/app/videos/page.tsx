@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Nav from "@/components/sections/Nav";
 import Footer from "@/components/sections/Footer";
 import Link from "next/link";
@@ -139,6 +140,9 @@ const LEVEL_COLORS: Record<string, { bg: string; text: string }> = {
 };
 
 export default function VideosPage() {
+  const [activeCategory, setActiveCategory] = useState("All");
+  const filtered = activeCategory === "All" ? VIDEOS : VIDEOS.filter((v) => v.category === activeCategory);
+
   return (
     <>
       <Nav />
@@ -179,23 +183,29 @@ export default function VideosPage() {
             </p>
 
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 32 }}>
-              {CATEGORIES.map((cat) => (
-                <span
-                  key={cat}
-                  style={{
-                    padding: "6px 14px",
-                    background: cat === "All" ? "var(--fp-accent)" : "var(--fp-surface)",
-                    color: cat === "All" ? "var(--fp-black)" : "var(--fp-text-muted)",
-                    border: "1px solid var(--fp-border)",
-                    borderRadius: 20,
-                    fontSize: 13,
-                    fontWeight: 600,
-                    cursor: "pointer",
-                  }}
-                >
-                  {cat}
-                </span>
-              ))}
+              {CATEGORIES.map((cat) => {
+                const isActive = activeCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(cat)}
+                    style={{
+                      padding: "6px 14px",
+                      background: isActive ? "var(--fp-accent)" : "var(--fp-surface)",
+                      color: isActive ? "var(--fp-black)" : "var(--fp-text-muted)",
+                      border: `1px solid ${isActive ? "var(--fp-accent)" : "var(--fp-border)"}`,
+                      borderRadius: 20,
+                      fontSize: 13,
+                      fontWeight: 600,
+                      cursor: "pointer",
+                      fontFamily: "var(--font-dm-sans), sans-serif",
+                      transition: "background 0.15s, color 0.15s, border-color 0.15s",
+                    }}
+                  >
+                    {cat}
+                  </button>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -210,7 +220,7 @@ export default function VideosPage() {
                 gap: 20,
               }}
             >
-              {VIDEOS.map((video) => {
+              {filtered.map((video) => {
                 const levelStyle = LEVEL_COLORS[video.level] ?? LEVEL_COLORS["All Levels"];
                 return (
                   <Link

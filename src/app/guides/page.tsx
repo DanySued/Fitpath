@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Nav from "@/components/sections/Nav";
 import Footer from "@/components/sections/Footer";
 import Link from "next/link";
@@ -9,6 +10,9 @@ import { GUIDES, CATEGORY_COLORS } from "@/lib/data/guides";
 const ALL_CATEGORIES = ["All", "Strength", "Nutrition", "Recovery", "Running", "Cardio", "Flexibility"];
 
 export default function GuidesPage() {
+  const [activeCategory, setActiveCategory] = useState("All");
+  const filtered = activeCategory === "All" ? GUIDES : GUIDES.filter((g) => g.category === activeCategory);
+
   return (
     <>
       <Nav />
@@ -49,23 +53,29 @@ export default function GuidesPage() {
             </p>
 
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 32 }}>
-              {ALL_CATEGORIES.map((cat) => (
-                <span
-                  key={cat}
-                  style={{
-                    padding: "6px 14px",
-                    background: cat === "All" ? "var(--fp-accent)" : "var(--fp-surface)",
-                    color: cat === "All" ? "var(--fp-black)" : "var(--fp-text-muted)",
-                    border: "1px solid var(--fp-border)",
-                    borderRadius: 20,
-                    fontSize: 13,
-                    fontWeight: 600,
-                    cursor: "pointer",
-                  }}
-                >
-                  {cat}
-                </span>
-              ))}
+              {ALL_CATEGORIES.map((cat) => {
+                const isActive = activeCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(cat)}
+                    style={{
+                      padding: "6px 14px",
+                      background: isActive ? "var(--fp-accent)" : "var(--fp-surface)",
+                      color: isActive ? "var(--fp-black)" : "var(--fp-text-muted)",
+                      border: `1px solid ${isActive ? "var(--fp-accent)" : "var(--fp-border)"}`,
+                      borderRadius: 20,
+                      fontSize: 13,
+                      fontWeight: 600,
+                      cursor: "pointer",
+                      fontFamily: "var(--font-dm-sans), sans-serif",
+                      transition: "background 0.15s, color 0.15s, border-color 0.15s",
+                    }}
+                  >
+                    {cat}
+                  </button>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -80,7 +90,7 @@ export default function GuidesPage() {
                 gap: 20,
               }}
             >
-              {GUIDES.map((guide) => {
+              {filtered.map((guide) => {
                 const color = CATEGORY_COLORS[guide.category] ?? "#aaa8ff";
                 return (
                   <Link
