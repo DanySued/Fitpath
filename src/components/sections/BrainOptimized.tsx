@@ -3,10 +3,12 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { fadeUp, stagger, EASE_OUT } from "@/lib/motion";
+import { getIcon } from "@/components/fitpath/PathIcon";
 
 const tabs = [
   {
     id: "structure",
+    icon: "layers",
     label: "Follow a clear progression",
     heading: "Know exactly what to do next.",
     body: "Each FitPath path is broken into ordered stages — from foundations to advanced. No more guessing. You complete each task, check it off, and move forward with confidence.",
@@ -15,6 +17,7 @@ const tabs = [
   },
   {
     id: "track",
+    icon: "clipboard-list",
     label: "Track every step",
     heading: "Your progress, always saved.",
     body: "Complete a task and it's remembered. No account needed — your progress is stored locally and persists across sessions. Come back a week later, pick up exactly where you left off.",
@@ -23,6 +26,7 @@ const tabs = [
   },
   {
     id: "celebrate",
+    icon: "sparkles",
     label: "Stay motivated",
     heading: "Wins should feel like wins.",
     body: "Every task completion triggers an encouragement toast and a confetti burst. Small celebrations make the difference between quitting on week 3 and reaching your peak on week 8.",
@@ -76,11 +80,12 @@ export default function BrainOptimized() {
             <div className="flex flex-col gap-3 mb-12">
               {tabs.map((t) => {
                 const isActive = active === t.id;
+                const IconComp = getIcon(t.icon);
                 return (
                   <motion.button
                     key={t.id}
                     onClick={() => setActive(t.id)}
-                    className="text-left px-6 py-4 rounded-xl text-sm font-medium"
+                    className="text-left px-5 py-4 rounded-xl text-sm font-medium flex items-center gap-3"
                     style={{
                       position: "relative",
                       color: isActive ? "var(--fp-white)" : "var(--fp-text-muted)",
@@ -106,6 +111,26 @@ export default function BrainOptimized() {
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
                     )}
+                    {/* Icon container */}
+                    <motion.span
+                      style={{
+                        width: 32,
+                        height: 32,
+                        borderRadius: 8,
+                        background: isActive ? `${t.accent === "var(--fp-accent)" ? "#aaa8ff" : t.accent === "var(--fp-green)" ? "#7f9ef8" : "#bc8cff"}18` : "rgba(255,255,255,0.05)",
+                        border: `1px solid ${isActive ? (t.accent === "var(--fp-accent)" ? "#aaa8ff" : t.accent === "var(--fp-green)" ? "#7f9ef8" : "#bc8cff") + "30" : "rgba(255,255,255,0.08)"}`,
+                        color: isActive ? t.accent : "var(--fp-text-muted)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexShrink: 0,
+                        transition: "all 0.2s ease",
+                      }}
+                      animate={{ scale: isActive ? 1.05 : 1 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                    >
+                      {IconComp && <IconComp size={15} strokeWidth={1.75} />}
+                    </motion.span>
                     {t.label}
                   </motion.button>
                 );
