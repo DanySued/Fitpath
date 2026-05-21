@@ -53,7 +53,7 @@ export default function BrainOptimized() {
   const barsInView = useInView(barsRef, { once: true, margin: "-80px" });
 
   return (
-    <section className="fp-section" style={{ backgroundColor: "var(--fp-black)" }}>
+    <section className="fp-section" style={{ background: "linear-gradient(180deg, var(--fp-surface) 0%, var(--fp-black) 72px)" }}>
       <div className="fp-container">
         <motion.div
           variants={stagger(0.1)}

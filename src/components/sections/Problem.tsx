@@ -22,7 +22,7 @@ export default function Problem() {
   const barsInView = useInView(barsRef, { once: true, margin: "-100px" });
 
   return (
-    <section className="fp-section" style={{ backgroundColor: "var(--fp-surface)" }} id="learn">
+    <section className="fp-section" style={{ background: "linear-gradient(180deg, var(--fp-black) 0%, var(--fp-surface) 72px)" }} id="learn">
       <div className="fp-container">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left */}

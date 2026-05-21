@@ -55,7 +55,7 @@ function TiltCard({ children }: { children: React.ReactNode }) {
 
 export default function Research() {
   return (
-    <section className="fp-section" style={{ backgroundColor: "var(--fp-surface)" }}>
+    <section className="fp-section" style={{ background: "linear-gradient(180deg, var(--fp-black) 0%, var(--fp-surface) 72px)" }}>
       <div className="fp-container">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Left */}

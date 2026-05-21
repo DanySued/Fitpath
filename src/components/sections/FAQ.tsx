@@ -60,7 +60,7 @@ export default function FAQ() {
           {faqs.map((item, i) => (
             <motion.div key={i} style={{ borderTop: "1px solid var(--fp-border)" }} variants={fadeUp}>
               <button
-                className="w-full flex items-center justify-between py-6 text-left gap-8"
+                className="w-full flex items-center justify-between py-6 text-left gap-8 rounded-lg -mx-4 px-4 hover:bg-white/[0.03] transition-colors duration-150"
                 onClick={() => setOpen(open === i ? null : i)}
               >
                 <motion.span
