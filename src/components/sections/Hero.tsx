@@ -59,7 +59,7 @@ export default function Hero() {
             }}
           >
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "var(--fp-accent)" }} />
-            Structured fitness for every goal
+            Your goal has a clear path forward
           </span>
         </motion.div>
 
@@ -75,7 +75,7 @@ export default function Hero() {
           style={{ fontSize: "0.9375rem", color: "rgba(212,204,196,0.65)" }}
           variants={fadeUp}
         >
-          24+ training paths. Pick your goal, follow the stages, get there.
+          Pick a goal. Follow the stages. Skip the guesswork.
         </motion.p>
 
         <motion.div className="flex flex-col sm:flex-row items-center gap-4" variants={fadeUp}>

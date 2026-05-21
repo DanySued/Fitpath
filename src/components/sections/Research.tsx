@@ -65,14 +65,14 @@ export default function Research() {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
           >
-            <motion.p className="fp-eyebrow" variants={fadeUp}>What users say</motion.p>
+            <motion.p className="fp-eyebrow" variants={fadeUp}>From the community</motion.p>
             <motion.h2
               style={{ fontSize: "clamp(2.25rem, 4.8vw, 3rem)", color: "var(--fp-white)" }}
               variants={fadeUp}
             >
-              Real people,
+              People who
               <br />
-              <span style={{ fontStyle: "italic" }}>real results.</span>
+              <span style={{ fontStyle: "italic" }}>followed through.</span>
             </motion.h2>
 
             <motion.p

@@ -58,9 +58,9 @@ export default function FeatureCarousel() {
           style={{ fontSize: "clamp(2.25rem, 4.8vw, 3rem)", color: "var(--fp-white)" }}
           variants={fadeUp}
         >
-          Built for{" "}
+          Four tools.{" "}
           <span style={{ fontStyle: "italic", color: "var(--fp-accent)" }}>
-            real progress
+            One direction.
           </span>
         </motion.h2>
       </motion.div>

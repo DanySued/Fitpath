@@ -29,7 +29,7 @@ const tabs = [
   {
     id: "celebrate",
     icon: "sparkles",
-    label: "Stay motivated",
+    label: "Celebrate the wins",
     heading: "Wins should feel like wins.",
     body: "Every task triggers a celebration. Small wins are the difference between week 3 and week 8.",
     stat: { value: "2.1×", label: "more likely to finish the full path" },
@@ -67,8 +67,8 @@ export default function BrainOptimized() {
             style={{ fontSize: "clamp(2.25rem, 4.8vw, 3rem)", color: "var(--fp-white)" }}
             variants={fadeUp}
           >
-            Structure beats{" "}
-            <span style={{ fontStyle: "italic", color: "var(--fp-accent)" }}>motivation.</span>
+            Designed to keep{" "}
+            <span style={{ fontStyle: "italic", color: "var(--fp-accent)" }}>you moving.</span>
           </motion.h2>
         </motion.div>
 

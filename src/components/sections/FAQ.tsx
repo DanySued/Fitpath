@@ -45,9 +45,9 @@ export default function FAQ() {
             style={{ fontSize: "clamp(2.25rem, 4.8vw, 3rem)", color: "var(--fp-white)" }}
             variants={fadeUp}
           >
-            Answers to
+            Questions
             <br />
-            <span style={{ fontStyle: "italic" }}>good questions.</span>
+            <span style={{ fontStyle: "italic" }}>worth asking.</span>
           </motion.h2>
         </motion.div>
 
