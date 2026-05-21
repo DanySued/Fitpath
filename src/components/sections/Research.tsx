@@ -83,13 +83,20 @@ export default function Research() {
               Not willpower. Not motivation. Just steps you can follow.
             </motion.p>
 
-            <motion.p
-              className="mt-10 text-sm"
-              style={{ color: "var(--fp-text-muted)", fontStyle: "italic" }}
-              variants={fadeUp}
+            <motion.div
+              className="flex gap-8 mt-10"
+              variants={stagger(0.08, 0.1)}
             >
-              Real people. Real progress. No gym required.
-            </motion.p>
+              {[
+                { value: "89%", label: "finish at least 3 stages" },
+                { value: "4.8★", label: "avg. community rating" },
+              ].map(({ value, label }) => (
+                <motion.div key={label} variants={fadeUp}>
+                  <p className="text-2xl font-light" style={{ fontFamily: "var(--font-instrument-serif)", color: "var(--fp-accent)" }}>{value}</p>
+                  <p className="text-xs mt-1" style={{ color: "var(--fp-text-muted)" }}>{label}</p>
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.div>
 
           {/* Right: testimonials */}

@@ -29,6 +29,8 @@ export default function PathsPage() {
                 color: "var(--fp-white)",
                 maxWidth: 600,
                 marginBottom: 16,
+                fontFamily: "var(--font-instrument-serif), serif",
+                fontWeight: 400,
               }}
             >
               Find your{" "}

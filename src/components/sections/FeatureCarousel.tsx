@@ -87,18 +87,25 @@ export default function FeatureCarousel() {
                 display: "flex",
                 flexDirection: "column",
                 cursor: "default",
+                position: "relative",
+                overflow: "hidden",
               }}
               whileHover={{
                 y: -6,
                 borderColor: "var(--fp-border-2)",
-                boxShadow: `0 16px 48px rgba(0,0,0,0.4)`,
+                boxShadow: "0 16px 48px rgba(0,0,0,0.4)",
               }}
               transition={{ duration: 0.22, ease: EASE_OUT }}
             >
+              {/* Accent top line */}
+              <div
+                className="absolute top-0 left-0 right-0 h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center pointer-events-none"
+                style={{ background: `linear-gradient(90deg, transparent, ${f.accentRaw}99, transparent)` }}
+              />
               <motion.div
                 style={{
-                  width: 44,
-                  height: 44,
+                  width: 48,
+                  height: 48,
                   borderRadius: 12,
                   background: `${f.accentRaw}14`,
                   border: `1px solid ${f.accentRaw}28`,

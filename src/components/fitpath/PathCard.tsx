@@ -63,19 +63,19 @@ export default function PathCard({ path }: { path: Path }) {
           }}
           transition={{ type: "spring", stiffness: 400, damping: 20 }}
           style={{
-            width: 56,
-            height: 56,
-            borderRadius: 14,
+            width: 68,
+            height: 68,
+            borderRadius: 16,
             background: `${path.color}18`,
             border: `1px solid ${path.color}30`,
             color: path.color,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            margin: "0 auto 20px",
+            margin: "0 auto 22px",
           }}
         >
-          <PathIcon name={path.icon} size={26} strokeWidth={1.5} />
+          <PathIcon name={path.icon} size={28} strokeWidth={1.5} />
         </motion.div>
 
         {/* Title + badges */}

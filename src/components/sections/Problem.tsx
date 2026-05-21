@@ -77,7 +77,7 @@ export default function Problem() {
             transition={{ duration: 0.7, ease: EASE_OUT }}
           >
             <div
-              className="rounded-3xl overflow-hidden aspect-[4/5]"
+              className="rounded-3xl overflow-hidden aspect-[4/3]"
               style={{ backgroundColor: "var(--fp-black)", border: "1px solid var(--fp-border)" }}
             >
               <div className="w-full h-full flex items-center justify-center p-6 sm:p-12">
