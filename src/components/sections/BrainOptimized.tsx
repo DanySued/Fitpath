@@ -63,8 +63,7 @@ export default function BrainOptimized() {
         >
           <motion.p className="fp-eyebrow" variants={fadeUp}>Why it works</motion.p>
           <motion.h2
-            className="mb-10"
-            style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", color: "var(--fp-white)", fontFamily: "var(--font-instrument-serif), serif", fontWeight: 400 }}
+            className="fp-h2 mb-10"
             variants={fadeUp}
           >
             Designed to keep{" "}
@@ -191,9 +190,9 @@ export default function BrainOptimized() {
               <p className="text-xs uppercase tracking-widest mb-4" style={{ color: "var(--fp-text-muted)" }}>
                 Strength Training Path — progress
               </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <div className="flex flex-col gap-2">
                 {progressItems.map(({ label, pct }, i) => (
-                  <div key={label} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <div key={label} className="flex items-center gap-2.5">
                     <span style={{ fontSize: 12, color: pct === 100 ? "var(--fp-green)" : "var(--fp-text-muted)", width: "45%", minWidth: 120, flexShrink: 0 }}>
                       {pct === 100 ? "✓ " : ""}{label}
                     </span>

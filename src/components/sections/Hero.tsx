@@ -26,15 +26,15 @@ export default function Hero() {
     offset: ["start start", "end start"],
   });
 
-  // Background drifts slowest (appears farthest back)
-  const bgY = useTransform(scrollYProgress, [0, 1], prefersReduced ? [0, 0] : [0, 90]);
-  // Content drifts at medium speed
-  const contentY = useTransform(scrollYProgress, [0, 1], prefersReduced ? [0, 0] : [0, 45]);
-  // CTA + stats drift least (closest layer)
-  const ctaY = useTransform(scrollYProgress, [0, 1], prefersReduced ? [0, 0] : [0, 20]);
+  const bgYRaw      = useTransform(scrollYProgress, [0, 1],   [0, 90]);
+  const contentYRaw = useTransform(scrollYProgress, [0, 1],   [0, 45]);
+  const ctaYRaw     = useTransform(scrollYProgress, [0, 1],   [0, 20]);
+  const opacityRaw  = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
-  // Fade out content slightly as it scrolls away
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+  const bgY          = useTransform(bgYRaw,      v => prefersReduced ? 0 : v);
+  const contentY     = useTransform(contentYRaw, v => prefersReduced ? 0 : v);
+  const ctaY         = useTransform(ctaYRaw,     v => prefersReduced ? 0 : v);
+  const contentOpacity = useTransform(opacityRaw, v => prefersReduced ? 1 : v);
 
   // Magnetic button
   const mx = useMotionValue(0);
@@ -58,7 +58,6 @@ export default function Hero() {
       className="relative flex flex-col items-center justify-center text-center pb-12 sm:pb-20 overflow-hidden"
       style={{ backgroundColor: "var(--fp-black)", minHeight: "clamp(520px, calc(100vh - 64px), 900px)" }}
     >
-      {/* Background layer — slowest */}
       <motion.div className="absolute inset-0" style={{ y: bgY }}>
         <div
           className="hero-deco absolute inset-0"
@@ -74,7 +73,6 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* Content layer — medium */}
       <motion.div
         className="fp-container relative z-10 flex flex-col items-center"
         style={{ y: contentY, opacity: contentOpacity }}
@@ -115,7 +113,6 @@ export default function Hero() {
             Pick a goal. Follow the stages. Skip the guesswork.
           </motion.p>
 
-          {/* CTA layer — least drift */}
           <motion.div style={{ y: ctaY }} className="flex flex-col items-center w-full">
             <motion.div className="flex flex-col sm:flex-row items-center gap-4" variants={fadeUp}>
               <MotionLink

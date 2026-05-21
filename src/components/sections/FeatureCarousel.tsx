@@ -55,7 +55,7 @@ export default function FeatureCarousel() {
       >
         <motion.p className="fp-eyebrow" variants={fadeUp}>How it works</motion.p>
         <motion.h2
-          style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", color: "var(--fp-white)", fontFamily: "var(--font-instrument-serif), serif", fontWeight: 400 }}
+          className="fp-h2"
           variants={fadeUp}
         >
           Four tools.{" "}

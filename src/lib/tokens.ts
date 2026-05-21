@@ -16,7 +16,7 @@ export const typography = {
   fontDisplay: "'Instrument Serif', serif",
   fontBody:    "'DM Sans', sans-serif",
   h1: "clamp(3rem, 5.6vw, 3.5rem)",
-  h2: "clamp(2.25rem, 4.8vw, 3rem)",
+  h2: "clamp(2rem, 4vw, 2.75rem)",
   h3: "2rem",
   body: "0.9375rem",
   small: "0.875rem",
