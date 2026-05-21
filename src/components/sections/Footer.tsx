@@ -38,7 +38,7 @@ export default function Footer() {
     <footer style={{ backgroundColor: "var(--fp-surface)" }}>
       {/* CTA band */}
       <motion.div
-        className="fp-section"
+        className="py-14 sm:py-20"
         style={{ borderBottom: "1px solid var(--fp-border)" }}
         variants={stagger(0.1)}
         initial="hidden"

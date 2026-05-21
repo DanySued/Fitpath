@@ -41,8 +41,8 @@ export default function FAQ() {
         >
           <motion.p className="fp-eyebrow" variants={fadeUp}>FAQ</motion.p>
           <motion.h2
-            className="mb-14"
-            style={{ fontSize: "clamp(2.25rem, 4.8vw, 3rem)", color: "var(--fp-white)" }}
+            className="mb-12"
+            style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", color: "var(--fp-white)", fontFamily: "var(--font-instrument-serif), serif", fontWeight: 400 }}
             variants={fadeUp}
           >
             Questions

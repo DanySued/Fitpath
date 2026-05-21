@@ -67,7 +67,7 @@ export default function Research() {
           >
             <motion.p className="fp-eyebrow" variants={fadeUp}>From the community</motion.p>
             <motion.h2
-              style={{ fontSize: "clamp(2.25rem, 4.8vw, 3rem)", color: "var(--fp-white)" }}
+              style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", color: "var(--fp-white)", fontFamily: "var(--font-instrument-serif), serif", fontWeight: 400 }}
               variants={fadeUp}
             >
               People who
@@ -83,27 +83,13 @@ export default function Research() {
               Not willpower. Not motivation. Just steps you can follow.
             </motion.p>
 
-            <motion.div className="flex flex-wrap gap-6 sm:gap-8 mt-10 sm:mt-12" variants={stagger(0.08, 0.1)}>
-              {[
-                { value: "500K+", label: "Active users" },
-                { value: "24+", label: "Training paths" },
-                { value: "2.5M+", label: "Tasks completed" },
-              ].map(({ value, label }) => (
-                <motion.div key={label} variants={fadeUp}>
-                  <motion.p
-                    className="text-3xl font-light"
-                    style={{ fontFamily: "var(--font-instrument-serif)", color: "var(--fp-accent)" }}
-                    initial={{ opacity: 0, y: 12 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, ease: EASE_OUT }}
-                  >
-                    {value}
-                  </motion.p>
-                  <p className="text-xs mt-1" style={{ color: "var(--fp-text-muted)" }}>{label}</p>
-                </motion.div>
-              ))}
-            </motion.div>
+            <motion.p
+              className="mt-10 text-sm"
+              style={{ color: "var(--fp-text-muted)", fontStyle: "italic" }}
+              variants={fadeUp}
+            >
+              Real people. Real progress. No gym required.
+            </motion.p>
           </motion.div>
 
           {/* Right: testimonials */}

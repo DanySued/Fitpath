@@ -63,8 +63,8 @@ export default function BrainOptimized() {
         >
           <motion.p className="fp-eyebrow" variants={fadeUp}>Why it works</motion.p>
           <motion.h2
-            className="mb-16"
-            style={{ fontSize: "clamp(2.25rem, 4.8vw, 3rem)", color: "var(--fp-white)" }}
+            className="mb-10"
+            style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", color: "var(--fp-white)", fontFamily: "var(--font-instrument-serif), serif", fontWeight: 400 }}
             variants={fadeUp}
           >
             Designed to keep{" "}
@@ -172,7 +172,7 @@ export default function BrainOptimized() {
                 <h3 className="text-2xl font-semibold mb-5 leading-snug" style={{ fontFamily: "var(--font-dm-sans)", color: "var(--fp-white)" }}>
                   {current.heading}
                 </h3>
-                <p className="leading-relaxed text-base" style={{ color: "var(--fp-text-muted)" }}>
+                <p className="leading-relaxed" style={{ color: "var(--fp-text-muted)", fontSize: "0.9375rem" }}>
                   {current.body}
                 </p>
               </motion.div>
