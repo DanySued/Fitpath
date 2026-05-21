@@ -107,7 +107,7 @@ export default function Hero() {
 
           <motion.p
             className="mb-10 max-w-sm leading-relaxed"
-            style={{ fontSize: "0.9375rem", color: "rgba(212,204,196,0.65)" }}
+            style={{ fontSize: "0.9375rem", color: "var(--fp-text-muted)" }}
             variants={fadeUp}
           >
             Pick a goal. Follow the stages. Skip the guesswork.

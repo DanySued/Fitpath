@@ -112,6 +112,8 @@ export default async function PathDetailPage({ params }: Props) {
                         fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
                         color: "var(--fp-white)",
                         marginBottom: 10,
+                        fontFamily: "var(--font-instrument-serif), serif",
+                        fontWeight: 400,
                       }}
                     >
                       {pathMeta.title}

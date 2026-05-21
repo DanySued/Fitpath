@@ -75,7 +75,7 @@ export default function PathGrid() {
               e.currentTarget.style.boxShadow = "none";
             }}
           />
-          <span style={{ position: "absolute", right: 12, top: "50%", transform: "translateY(-50%)", fontSize: 11, color: "var(--fp-text-muted)", pointerEvents: "none", fontFamily: "var(--font-geist-mono), monospace" }}>
+          <span className="hidden sm:inline" style={{ position: "absolute", right: 12, top: "50%", transform: "translateY(-50%)", fontSize: 11, color: "var(--fp-text-muted)", pointerEvents: "none", fontFamily: "var(--font-geist-mono), monospace" }}>
             ⌘K
           </span>
         </motion.div>

@@ -1,0 +1,334 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - text: New paths added — Boxing, Martial Arts, and Athletic Performance are now live.
+    - link "Explore now →" [ref=e3] [cursor=pointer]:
+      - /url: /paths
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - link "FitPath" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img [ref=e9]
+          - generic [ref=e15]: FitPath
+        - button "Toggle menu" [ref=e16]
+    - main [ref=e20]:
+      - generic [ref=e27]:
+        - generic [ref=e29]: Your goal has a clear path forward
+        - generic [ref=e31]: Train with purpose.
+        - generic [ref=e32]: Progress with clarity.
+        - paragraph [ref=e33]: Pick a goal. Follow the stages. Skip the guesswork.
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - link "Browse Paths" [ref=e36] [cursor=pointer]:
+              - /url: /paths
+            - link "Learn more" [ref=e37] [cursor=pointer]:
+              - /url: "#features"
+              - text: Learn more
+              - img [ref=e38]
+          - paragraph [ref=e40]: Free · No account · Progress saved locally
+          - generic [ref=e41]:
+            - generic [ref=e42]:
+              - paragraph [ref=e43]: 24+
+              - paragraph [ref=e44]: Training paths
+            - generic [ref=e45]:
+              - paragraph [ref=e46]: 500K+
+              - paragraph [ref=e47]: Active users
+            - generic [ref=e48]:
+              - paragraph [ref=e49]: 2.5M+
+              - paragraph [ref=e50]: Workouts logged
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - paragraph [ref=e55]: The problem
+          - heading "Motivation isn't your problem." [level=2] [ref=e56]:
+            - text: Motivation isn't
+            - text: your problem.
+          - paragraph [ref=e57]: Most people quit not because they're lazy — but because there's no clear path. Structure beats motivation, every time.
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - generic [ref=e60]: 73%
+              - generic [ref=e61]: abandon goals within 3 months
+            - generic [ref=e62]:
+              - generic [ref=e63]: 9 in 10
+              - generic [ref=e64]: cite "no clear next step"
+            - generic [ref=e65]:
+              - generic [ref=e66]: 3×
+              - generic [ref=e67]: better results with structured paths
+        - generic [ref=e68]:
+          - generic [ref=e71]:
+            - generic [ref=e73]:
+              - generic [ref=e74]: "Week 1–2: Foundations"
+              - generic: ✓
+            - generic [ref=e78]:
+              - generic [ref=e79]: "Week 3–4: Volume"
+              - generic: ✓
+            - generic [ref=e84]: "Week 5–6: Intensity"
+            - generic [ref=e89]: "Week 7–8: Peak"
+            - paragraph [ref=e92]: Strength Training Path — Week 5
+          - generic [ref=e93]:
+            - paragraph [ref=e94]: Completion
+            - paragraph [ref=e95]: 63%
+            - paragraph [ref=e96]: 5 of 7 tasks done
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - paragraph [ref=e99]: How it works
+          - heading "Four tools. One direction." [level=2] [ref=e100]
+        - generic [ref=e101]:
+          - generic [ref=e102]:
+            - img [ref=e104]
+            - generic [ref=e107]: "01"
+            - heading "Progressive stages" [level=3] [ref=e108]
+            - paragraph [ref=e109]: Ordered from beginner to advanced. You always know what's next.
+          - generic [ref=e110]:
+            - img [ref=e112]
+            - generic [ref=e115]: "02"
+            - heading "Task tracking" [level=3] [ref=e116]
+            - paragraph [ref=e117]: Check off stages as you go. No account required.
+          - generic [ref=e118]:
+            - img [ref=e120]
+            - generic [ref=e123]: "03"
+            - heading "Real-time search" [level=3] [ref=e124]
+            - paragraph [ref=e125]: Filter 24+ paths by sport or goal. ⌘K from anywhere.
+          - generic [ref=e126]:
+            - img [ref=e128]
+            - generic [ref=e131]: "04"
+            - heading "Custom builder" [level=3] [ref=e132]
+            - paragraph [ref=e133]: Build your own 4-step path and share it.
+      - generic [ref=e135]:
+        - generic [ref=e136]:
+          - paragraph [ref=e137]: Why it works
+          - heading "Designed to keep you moving." [level=2] [ref=e138]
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - button "Follow a clear progression" [ref=e142] [cursor=pointer]:
+                - img [ref=e145]
+                - text: Follow a clear progression
+              - button "Track every step" [ref=e149] [cursor=pointer]:
+                - img [ref=e151]
+                - text: Track every step
+              - button "Celebrate the wins" [ref=e154] [cursor=pointer]:
+                - img [ref=e156]
+                - text: Celebrate the wins
+            - generic [ref=e159]:
+              - generic [ref=e160]: 3×
+              - generic [ref=e161]: better adherence with structured paths
+          - generic [ref=e162]:
+            - generic [ref=e163]:
+              - heading "Know exactly what to do next." [level=3] [ref=e164]
+              - paragraph [ref=e165]: Ordered stages from foundations to advanced. Complete each task, check it off, move forward.
+            - generic [ref=e166]:
+              - paragraph [ref=e167]: Strength Training Path — progress
+              - generic [ref=e168]:
+                - generic [ref=e170]: ✓ Form fundamentals
+                - generic [ref=e173]: ✓ Baseline strength
+                - generic [ref=e176]: ✓ Progressive overload
+                - generic [ref=e179]: Hypertrophy phase
+                - generic [ref=e182]: Strength phase
+      - generic [ref=e186]:
+        - generic [ref=e187]:
+          - paragraph [ref=e188]: From the community
+          - heading "People who followed through." [level=2] [ref=e189]:
+            - text: People who
+            - text: followed through.
+          - paragraph [ref=e190]: Not willpower. Not motivation. Just steps you can follow.
+          - generic [ref=e191]:
+            - generic [ref=e192]:
+              - paragraph [ref=e193]: 89%
+              - paragraph [ref=e194]: finish at least 3 stages
+            - generic [ref=e195]:
+              - paragraph [ref=e196]: 4.8★
+              - paragraph [ref=e197]: avg. community rating
+        - generic [ref=e198]:
+          - generic [ref=e202]:
+            - generic [ref=e203]:
+              - generic [ref=e204]: Reddit r/Fitness
+              - generic [ref=e205]: u/steadyprogress_22
+            - paragraph [ref=e206]: “Finally something that breaks goals into actual steps. I've tried 4 different apps — this is the first one where I know what to do on day 30.”
+          - generic [ref=e210]:
+            - generic [ref=e211]:
+              - generic [ref=e212]: Twitter / X
+              - generic [ref=e213]: "@liftjourney"
+            - paragraph [ref=e214]: “The strength training path got me from 0 to 3x/week consistently. The task-by-task format is the difference between me finishing and quitting.”
+          - generic [ref=e218]:
+            - generic [ref=e219]:
+              - generic [ref=e220]: Community Discord
+              - generic [ref=e221]: firstmarathon_dani
+            - paragraph [ref=e222]: “Used the marathon path to prep for my first race. The stage breakdowns made a 16-week plan feel totally approachable.”
+      - generic [ref=e223]:
+        - paragraph [ref=e224]: 24+ Training Paths Across Every Discipline
+        - generic [ref=e226]:
+          - generic [ref=e227]:
+            - img [ref=e228]
+            - text: Strength Training
+          - generic [ref=e234]:
+            - img [ref=e235]
+            - text: Running
+          - generic [ref=e237]:
+            - img [ref=e238]
+            - text: Yoga
+          - generic [ref=e241]:
+            - img [ref=e242]
+            - text: Cycling
+          - generic [ref=e247]:
+            - img [ref=e248]
+            - text: Nutrition
+          - generic [ref=e251]:
+            - img [ref=e252]
+            - text: CrossFit
+          - generic [ref=e254]:
+            - img [ref=e255]
+            - text: Pilates
+          - generic [ref=e259]:
+            - img [ref=e260]
+            - text: Swimming
+          - generic [ref=e264]:
+            - img [ref=e265]
+            - text: Boxing
+          - generic [ref=e267]:
+            - img [ref=e268]
+            - text: Martial Arts
+          - generic [ref=e271]:
+            - img [ref=e272]
+            - text: PT Certification
+          - generic [ref=e275]:
+            - img [ref=e276]
+            - text: Rehab & Recovery
+          - generic [ref=e279]:
+            - img [ref=e280]
+            - text: Strength Training
+          - generic [ref=e286]:
+            - img [ref=e287]
+            - text: Running
+          - generic [ref=e289]:
+            - img [ref=e290]
+            - text: Yoga
+          - generic [ref=e293]:
+            - img [ref=e294]
+            - text: Cycling
+          - generic [ref=e299]:
+            - img [ref=e300]
+            - text: Nutrition
+          - generic [ref=e303]:
+            - img [ref=e304]
+            - text: CrossFit
+          - generic [ref=e306]:
+            - img [ref=e307]
+            - text: Pilates
+          - generic [ref=e311]:
+            - img [ref=e312]
+            - text: Swimming
+          - generic [ref=e316]:
+            - img [ref=e317]
+            - text: Boxing
+          - generic [ref=e319]:
+            - img [ref=e320]
+            - text: Martial Arts
+          - generic [ref=e323]:
+            - img [ref=e324]
+            - text: PT Certification
+          - generic [ref=e327]:
+            - img [ref=e328]
+            - text: Rehab & Recovery
+      - generic [ref=e332]:
+        - generic [ref=e333]:
+          - paragraph [ref=e334]: FAQ
+          - heading "Questions worth asking." [level=2] [ref=e335]:
+            - text: Questions
+            - text: worth asking.
+        - generic [ref=e336]:
+          - button "Do I need to create an account? +" [ref=e338]:
+            - generic [ref=e339]: Do I need to create an account?
+            - generic [ref=e340]: +
+          - button "How many training paths are available? +" [ref=e342]:
+            - generic [ref=e343]: How many training paths are available?
+            - generic [ref=e344]: +
+          - button "Can I build my own path? +" [ref=e346]:
+            - generic [ref=e347]: Can I build my own path?
+            - generic [ref=e348]: +
+          - button "How detailed are the task stages? +" [ref=e350]:
+            - generic [ref=e351]: How detailed are the task stages?
+            - generic [ref=e352]: +
+          - button "Is FitPath really free? +" [ref=e354]:
+            - generic [ref=e355]: Is FitPath really free?
+            - generic [ref=e356]: +
+    - contentinfo [ref=e358]:
+      - generic [ref=e360]:
+        - generic [ref=e361]:
+          - heading "Start your path. Track your progress." [level=2] [ref=e362]:
+            - text: Start your path.
+            - text: Track your progress.
+          - paragraph [ref=e363]: 24+ structured training paths. Free, no account required.
+        - link "Browse Paths" [ref=e365] [cursor=pointer]:
+          - /url: /paths
+      - generic [ref=e367]:
+        - generic [ref=e368]:
+          - generic [ref=e369]:
+            - paragraph [ref=e370]: Paths
+            - list [ref=e371]:
+              - listitem [ref=e372]:
+                - link "Strength Training" [ref=e373] [cursor=pointer]:
+                  - /url: /paths/strength-training
+              - listitem [ref=e374]:
+                - link "Running" [ref=e375] [cursor=pointer]:
+                  - /url: /paths/running
+              - listitem [ref=e376]:
+                - link "Yoga" [ref=e377] [cursor=pointer]:
+                  - /url: /paths/yoga
+              - listitem [ref=e378]:
+                - link "CrossFit" [ref=e379] [cursor=pointer]:
+                  - /url: /paths/crossfit
+          - generic [ref=e380]:
+            - paragraph [ref=e381]: Goals
+            - list [ref=e382]:
+              - listitem [ref=e383]:
+                - link "Weight Loss" [ref=e384] [cursor=pointer]:
+                  - /url: /paths/weight-loss
+              - listitem [ref=e385]:
+                - link "Muscle Building" [ref=e386] [cursor=pointer]:
+                  - /url: /paths/muscle-building
+              - listitem [ref=e387]:
+                - link "Endurance" [ref=e388] [cursor=pointer]:
+                  - /url: /paths/cardio-endurance
+              - listitem [ref=e389]:
+                - link "Flexibility" [ref=e390] [cursor=pointer]:
+                  - /url: /paths/flexibility
+          - generic [ref=e391]:
+            - paragraph [ref=e392]: Resources
+            - list [ref=e393]:
+              - listitem [ref=e394]:
+                - link "Guides" [ref=e395] [cursor=pointer]:
+                  - /url: /guides
+              - listitem [ref=e396]:
+                - link "Videos" [ref=e397] [cursor=pointer]:
+                  - /url: /videos
+              - listitem [ref=e398]:
+                - link "All Paths" [ref=e399] [cursor=pointer]:
+                  - /url: /paths
+              - listitem [ref=e400]:
+                - link "FAQ" [ref=e401] [cursor=pointer]:
+                  - /url: /#faq
+          - generic [ref=e402]:
+            - paragraph [ref=e403]: Project
+            - list [ref=e404]:
+              - listitem [ref=e405]:
+                - link "About" [ref=e406] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e407]:
+                - link "GitHub" [ref=e408] [cursor=pointer]:
+                  - /url: https://github.com/DanySued/roadmap
+              - listitem [ref=e409]:
+                - link "Privacy" [ref=e410] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=e411]:
+                - link "Terms" [ref=e412] [cursor=pointer]:
+                  - /url: /terms
+        - generic [ref=e414]:
+          - link "Privacy Policy" [ref=e415] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms of Service" [ref=e416] [cursor=pointer]:
+            - /url: /terms
+          - generic [ref=e417]: © 2026 FitPath — Built by Dany Sue
+      - link "fitpath" [ref=e419] [cursor=pointer]:
+        - /url: /
+  - button "Open Next.js Dev Tools" [ref=e425] [cursor=pointer]:
+    - img [ref=e426]
