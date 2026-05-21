@@ -1,0 +1,432 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e433] [cursor=pointer]:
+    - img [ref=e434]
+  - alert [ref=e439]: Training Paths — FitPath
+  - generic [ref=e440]:
+    - banner [ref=e441]:
+      - generic [ref=e442]:
+        - link "FitPath" [ref=e443] [cursor=pointer]:
+          - /url: /
+          - img [ref=e445]
+          - generic [ref=e451]: FitPath
+        - navigation [ref=e452]:
+          - link "Paths" [ref=e453] [cursor=pointer]:
+            - /url: /paths
+            - text: Paths
+          - link "Guides" [ref=e454] [cursor=pointer]:
+            - /url: /guides
+            - text: Guides
+          - link "Videos" [ref=e455] [cursor=pointer]:
+            - /url: /videos
+            - text: Videos
+        - generic [ref=e456]:
+          - button "Toggle theme" [ref=e457] [cursor=pointer]:
+            - img [ref=e458]
+          - link "Log in" [ref=e464] [cursor=pointer]:
+            - /url: /login
+          - link "Sign up free" [ref=e465] [cursor=pointer]:
+            - /url: /signup
+    - main [ref=e466]:
+      - generic [ref=e468]:
+        - paragraph [ref=e469]: 24+ Training Paths
+        - heading "Find your next challenge." [level=1] [ref=e470]
+        - paragraph [ref=e471]: Curated training paths from beginner to elite — each with progressive stages and task tracking so you always know what to do next.
+        - generic [ref=e472]:
+          - generic [ref=e473]:
+            - paragraph [ref=e474]: "28"
+            - paragraph [ref=e475]: Total paths
+          - generic [ref=e476]:
+            - paragraph [ref=e477]: 500K+
+            - paragraph [ref=e478]: Active users
+          - generic [ref=e479]:
+            - paragraph [ref=e480]: Free
+            - paragraph [ref=e481]: Always
+      - generic [ref=e484]:
+        - generic [ref=e485]:
+          - generic [ref=e486]:
+            - img [ref=e487]
+            - textbox "Search paths…" [ref=e490]
+            - generic: ⌘K
+          - generic [ref=e491]:
+            - button "All Paths" [ref=e492] [cursor=pointer]: All Paths
+            - button "By Sport" [ref=e494] [cursor=pointer]
+            - button "By Goal" [ref=e495] [cursor=pointer]
+            - button "Best Practices" [ref=e496] [cursor=pointer]
+        - generic [ref=e497]:
+          - link "Strength Training Popular Build muscle and progressive strength through resistance training Start path" [ref=e501] [cursor=pointer]:
+            - /url: /paths/strength-training
+            - generic [ref=e502]:
+              - img [ref=e504]
+              - generic [ref=e510]:
+                - generic [ref=e511]:
+                  - heading "Strength Training" [level=3] [ref=e512]
+                  - generic [ref=e513]: Popular
+                - paragraph [ref=e514]: Build muscle and progressive strength through resistance training
+            - generic [ref=e515]:
+              - text: Start path
+              - img [ref=e516]
+          - link "Running Popular Training progression from beginner to marathon runner Start path" [ref=e521] [cursor=pointer]:
+            - /url: /paths/running
+            - generic [ref=e522]:
+              - img [ref=e524]
+              - generic [ref=e526]:
+                - generic [ref=e527]:
+                  - heading "Running" [level=3] [ref=e528]
+                  - generic [ref=e529]: Popular
+                - paragraph [ref=e530]: Training progression from beginner to marathon runner
+            - generic [ref=e531]:
+              - text: Start path
+              - img [ref=e532]
+          - link "Yoga Popular Yoga journey from basics to advanced asanas and mindfulness Start path" [ref=e537] [cursor=pointer]:
+            - /url: /paths/yoga
+            - generic [ref=e538]:
+              - img [ref=e540]
+              - generic [ref=e543]:
+                - generic [ref=e544]:
+                  - heading "Yoga" [level=3] [ref=e545]
+                  - generic [ref=e546]: Popular
+                - paragraph [ref=e547]: Yoga journey from basics to advanced asanas and mindfulness
+            - generic [ref=e548]:
+              - text: Start path
+              - img [ref=e549]
+          - link "Cycling Path to becoming a strong, efficient cyclist Start path" [ref=e554] [cursor=pointer]:
+            - /url: /paths/cycling
+            - generic [ref=e555]:
+              - img [ref=e557]
+              - generic [ref=e562]:
+                - heading "Cycling" [level=3] [ref=e564]
+                - paragraph [ref=e565]: Path to becoming a strong, efficient cyclist
+            - generic [ref=e566]:
+              - text: Start path
+              - img [ref=e567]
+          - link "Nutrition Coaching Master nutrition science and meal planning Start path" [ref=e572] [cursor=pointer]:
+            - /url: /paths/nutrition
+            - generic [ref=e573]:
+              - img [ref=e575]
+              - generic [ref=e578]:
+                - heading "Nutrition Coaching" [level=3] [ref=e580]
+                - paragraph [ref=e581]: Master nutrition science and meal planning
+            - generic [ref=e582]:
+              - text: Start path
+              - img [ref=e583]
+          - link "CrossFit Training foundation for functional fitness and competition Start path" [ref=e588] [cursor=pointer]:
+            - /url: /paths/crossfit
+            - generic [ref=e589]:
+              - img [ref=e591]
+              - generic [ref=e593]:
+                - heading "CrossFit" [level=3] [ref=e595]
+                - paragraph [ref=e596]: Training foundation for functional fitness and competition
+            - generic [ref=e597]:
+              - text: Start path
+              - img [ref=e598]
+          - link "Pilates Core strength and body control through pilates Start path" [ref=e603] [cursor=pointer]:
+            - /url: /paths/pilates
+            - generic [ref=e604]:
+              - img [ref=e606]
+              - generic [ref=e610]:
+                - heading "Pilates" [level=3] [ref=e612]
+                - paragraph [ref=e613]: Core strength and body control through pilates
+            - generic [ref=e614]:
+              - text: Start path
+              - img [ref=e615]
+          - link "Swimming Learn proper technique and endurance for swimming Start path" [ref=e620] [cursor=pointer]:
+            - /url: /paths/swimming
+            - generic [ref=e621]:
+              - img [ref=e623]
+              - generic [ref=e627]:
+                - heading "Swimming" [level=3] [ref=e629]
+                - paragraph [ref=e630]: Learn proper technique and endurance for swimming
+            - generic [ref=e631]:
+              - text: Start path
+              - img [ref=e632]
+          - link "Boxing New Master stance, technique, and boxing fundamentals Start path" [ref=e637] [cursor=pointer]:
+            - /url: /paths/boxing
+            - generic [ref=e638]:
+              - img [ref=e640]
+              - generic [ref=e642]:
+                - generic [ref=e643]:
+                  - heading "Boxing" [level=3] [ref=e644]
+                  - generic [ref=e645]: New
+                - paragraph [ref=e646]: Master stance, technique, and boxing fundamentals
+            - generic [ref=e647]:
+              - text: Start path
+              - img [ref=e648]
+          - link "Martial Arts New Progress through belts and master martial arts discipline Start path" [ref=e653] [cursor=pointer]:
+            - /url: /paths/martial-arts
+            - generic [ref=e654]:
+              - img [ref=e656]
+              - generic [ref=e659]:
+                - generic [ref=e660]:
+                  - heading "Martial Arts" [level=3] [ref=e661]
+                  - generic [ref=e662]: New
+                - paragraph [ref=e663]: Progress through belts and master martial arts discipline
+            - generic [ref=e664]:
+              - text: Start path
+              - img [ref=e665]
+          - link "Personal Training Cert Become a certified personal trainer and coach Start path" [ref=e670] [cursor=pointer]:
+            - /url: /paths/pt-certification
+            - generic [ref=e671]:
+              - img [ref=e673]
+              - generic [ref=e676]:
+                - heading "Personal Training Cert" [level=3] [ref=e678]
+                - paragraph [ref=e679]: Become a certified personal trainer and coach
+            - generic [ref=e680]:
+              - text: Start path
+              - img [ref=e681]
+          - link "Rehab & Recovery Learn injury recovery and rehabilitation techniques Start path" [ref=e686] [cursor=pointer]:
+            - /url: /paths/rehab-therapy
+            - generic [ref=e687]:
+              - img [ref=e689]
+              - generic [ref=e692]:
+                - heading "Rehab & Recovery" [level=3] [ref=e694]
+                - paragraph [ref=e695]: Learn injury recovery and rehabilitation techniques
+            - generic [ref=e696]:
+              - text: Start path
+              - img [ref=e697]
+          - link "Strength Building Popular Programs to build muscle and increase max strength Start path" [ref=e702] [cursor=pointer]:
+            - /url: /paths/strength-building
+            - generic [ref=e703]:
+              - img [ref=e705]
+              - generic [ref=e708]:
+                - generic [ref=e709]:
+                  - heading "Strength Building" [level=3] [ref=e710]
+                  - generic [ref=e711]: Popular
+                - paragraph [ref=e712]: Programs to build muscle and increase max strength
+            - generic [ref=e713]:
+              - text: Start path
+              - img [ref=e714]
+          - link "Cardio Endurance Build cardiovascular health and aerobic capacity Start path" [ref=e719] [cursor=pointer]:
+            - /url: /paths/cardio-endurance
+            - generic [ref=e720]:
+              - img [ref=e722]
+              - generic [ref=e724]:
+                - heading "Cardio Endurance" [level=3] [ref=e726]
+                - paragraph [ref=e727]: Build cardiovascular health and aerobic capacity
+            - generic [ref=e728]:
+              - text: Start path
+              - img [ref=e729]
+          - link "Flexibility & Mobility Increase range of motion and prevent injuries Start path" [ref=e734] [cursor=pointer]:
+            - /url: /paths/flexibility
+            - generic [ref=e735]:
+              - img [ref=e737]
+              - generic [ref=e742]:
+                - heading "Flexibility & Mobility" [level=3] [ref=e744]
+                - paragraph [ref=e745]: Increase range of motion and prevent injuries
+            - generic [ref=e746]:
+              - text: Start path
+              - img [ref=e747]
+          - link "Weight Loss Popular Science-backed program for sustainable weight loss Start path" [ref=e752] [cursor=pointer]:
+            - /url: /paths/weight-loss
+            - generic [ref=e753]:
+              - img [ref=e755]
+              - generic [ref=e759]:
+                - generic [ref=e760]:
+                  - heading "Weight Loss" [level=3] [ref=e761]
+                  - generic [ref=e762]: Popular
+                - paragraph [ref=e763]: Science-backed program for sustainable weight loss
+            - generic [ref=e764]:
+              - text: Start path
+              - img [ref=e765]
+          - link "Muscle Building Hypertrophy training to maximize muscle growth Start path" [ref=e770] [cursor=pointer]:
+            - /url: /paths/muscle-building
+            - generic [ref=e771]:
+              - img [ref=e773]
+              - generic [ref=e779]:
+                - heading "Muscle Building" [level=3] [ref=e781]
+                - paragraph [ref=e782]: Hypertrophy training to maximize muscle growth
+            - generic [ref=e783]:
+              - text: Start path
+              - img [ref=e784]
+          - link "Nutrition Fundamentals Popular Learn macros, calories, and nutrition science Start path" [ref=e789] [cursor=pointer]:
+            - /url: /paths/nutrition-basics
+            - generic [ref=e790]:
+              - img [ref=e792]
+              - generic [ref=e795]:
+                - generic [ref=e796]:
+                  - heading "Nutrition Fundamentals" [level=3] [ref=e797]
+                  - generic [ref=e798]: Popular
+                - paragraph [ref=e799]: Learn macros, calories, and nutrition science
+            - generic [ref=e800]:
+              - text: Start path
+              - img [ref=e801]
+          - link "5K Training 8-week program to run a strong 5K Start path" [ref=e806] [cursor=pointer]:
+            - /url: /paths/5k-training
+            - generic [ref=e807]:
+              - img [ref=e809]
+              - generic [ref=e815]:
+                - heading "5K Training" [level=3] [ref=e817]
+                - paragraph [ref=e818]: 8-week program to run a strong 5K
+            - generic [ref=e819]:
+              - text: Start path
+              - img [ref=e820]
+          - link "Marathon Training 16-week program to complete your first marathon Start path" [ref=e825] [cursor=pointer]:
+            - /url: /paths/marathon-training
+            - generic [ref=e826]:
+              - img [ref=e828]
+              - generic [ref=e834]:
+                - heading "Marathon Training" [level=3] [ref=e836]
+                - paragraph [ref=e837]: 16-week program to complete your first marathon
+            - generic [ref=e838]:
+              - text: Start path
+              - img [ref=e839]
+          - link "Core Strength Build a stronger, more stable core Start path" [ref=e844] [cursor=pointer]:
+            - /url: /paths/core-strength
+            - generic [ref=e845]:
+              - img [ref=e847]
+              - generic [ref=e851]:
+                - heading "Core Strength" [level=3] [ref=e853]
+                - paragraph [ref=e854]: Build a stronger, more stable core
+            - generic [ref=e855]:
+              - text: Start path
+              - img [ref=e856]
+          - link "Athletic Performance New Enhance speed, power, and athletic ability Start path" [ref=e861] [cursor=pointer]:
+            - /url: /paths/athletic-performance
+            - generic [ref=e862]:
+              - img [ref=e864]
+              - generic [ref=e866]:
+                - generic [ref=e867]:
+                  - heading "Athletic Performance" [level=3] [ref=e868]
+                  - generic [ref=e869]: New
+                - paragraph [ref=e870]: Enhance speed, power, and athletic ability
+            - generic [ref=e871]:
+              - text: Start path
+              - img [ref=e872]
+          - link "Recovery Protocols Optimize recovery with sleep, stretching, and nutrition Start path" [ref=e877] [cursor=pointer]:
+            - /url: /paths/recovery-protocols
+            - generic [ref=e878]:
+              - img [ref=e880]
+              - generic [ref=e882]:
+                - heading "Recovery Protocols" [level=3] [ref=e884]
+                - paragraph [ref=e885]: Optimize recovery with sleep, stretching, and nutrition
+            - generic [ref=e886]:
+              - text: Start path
+              - img [ref=e887]
+          - link "Injury Prevention Prevent common injuries through smart training Start path" [ref=e892] [cursor=pointer]:
+            - /url: /paths/injury-prevention
+            - generic [ref=e893]:
+              - img [ref=e895]
+              - generic [ref=e897]:
+                - heading "Injury Prevention" [level=3] [ref=e899]
+                - paragraph [ref=e900]: Prevent common injuries through smart training
+            - generic [ref=e901]:
+              - text: Start path
+              - img [ref=e902]
+          - link "Recovery Techniques Best practices for active and passive recovery Start path" [ref=e907] [cursor=pointer]:
+            - /url: /paths/recovery-techniques
+            - generic [ref=e908]:
+              - img [ref=e910]
+              - generic [ref=e913]:
+                - heading "Recovery Techniques" [level=3] [ref=e915]
+                - paragraph [ref=e916]: Best practices for active and passive recovery
+            - generic [ref=e917]:
+              - text: Start path
+              - img [ref=e918]
+          - link "Nutrition Strategy Best practices for sports nutrition and meal timing Start path" [ref=e923] [cursor=pointer]:
+            - /url: /paths/nutrition-strategy
+            - generic [ref=e924]:
+              - img [ref=e926]
+              - generic [ref=e929]:
+                - heading "Nutrition Strategy" [level=3] [ref=e931]
+                - paragraph [ref=e932]: Best practices for sports nutrition and meal timing
+            - generic [ref=e933]:
+              - text: Start path
+              - img [ref=e934]
+          - link "Training Programming Best practices for periodization and program design Start path" [ref=e939] [cursor=pointer]:
+            - /url: /paths/training-programming
+            - generic [ref=e940]:
+              - img [ref=e942]
+              - generic [ref=e944]:
+                - heading "Training Programming" [level=3] [ref=e946]
+                - paragraph [ref=e947]: Best practices for periodization and program design
+            - generic [ref=e948]:
+              - text: Start path
+              - img [ref=e949]
+          - link "Sleep & Wellness Best practices for sleep quality and recovery Start path" [ref=e954] [cursor=pointer]:
+            - /url: /paths/sleep-wellness
+            - generic [ref=e955]:
+              - img [ref=e957]
+              - generic [ref=e959]:
+                - heading "Sleep & Wellness" [level=3] [ref=e961]
+                - paragraph [ref=e962]: Best practices for sleep quality and recovery
+            - generic [ref=e963]:
+              - text: Start path
+              - img [ref=e964]
+    - contentinfo [ref=e966]:
+      - generic [ref=e968]:
+        - generic [ref=e969]:
+          - heading "Start your path. Track your progress." [level=2] [ref=e970]:
+            - text: Start your path.
+            - text: Track your progress.
+          - paragraph [ref=e971]: 24+ structured training paths. Free, no account required.
+        - link "Browse Paths" [ref=e973] [cursor=pointer]:
+          - /url: /paths
+      - generic [ref=e975]:
+        - generic [ref=e976]:
+          - generic [ref=e977]:
+            - paragraph [ref=e978]: Paths
+            - list [ref=e979]:
+              - listitem [ref=e980]:
+                - link "Strength Training" [ref=e981] [cursor=pointer]:
+                  - /url: /paths/strength-training
+              - listitem [ref=e982]:
+                - link "Running" [ref=e983] [cursor=pointer]:
+                  - /url: /paths/running
+              - listitem [ref=e984]:
+                - link "Yoga" [ref=e985] [cursor=pointer]:
+                  - /url: /paths/yoga
+              - listitem [ref=e986]:
+                - link "CrossFit" [ref=e987] [cursor=pointer]:
+                  - /url: /paths/crossfit
+          - generic [ref=e988]:
+            - paragraph [ref=e989]: Goals
+            - list [ref=e990]:
+              - listitem [ref=e991]:
+                - link "Weight Loss" [ref=e992] [cursor=pointer]:
+                  - /url: /paths/weight-loss
+              - listitem [ref=e993]:
+                - link "Muscle Building" [ref=e994] [cursor=pointer]:
+                  - /url: /paths/muscle-building
+              - listitem [ref=e995]:
+                - link "Endurance" [ref=e996] [cursor=pointer]:
+                  - /url: /paths/cardio-endurance
+              - listitem [ref=e997]:
+                - link "Flexibility" [ref=e998] [cursor=pointer]:
+                  - /url: /paths/flexibility
+          - generic [ref=e999]:
+            - paragraph [ref=e1000]: Resources
+            - list [ref=e1001]:
+              - listitem [ref=e1002]:
+                - link "Guides" [ref=e1003] [cursor=pointer]:
+                  - /url: /guides
+              - listitem [ref=e1004]:
+                - link "Videos" [ref=e1005] [cursor=pointer]:
+                  - /url: /videos
+              - listitem [ref=e1006]:
+                - link "All Paths" [ref=e1007] [cursor=pointer]:
+                  - /url: /paths
+              - listitem [ref=e1008]:
+                - link "FAQ" [ref=e1009] [cursor=pointer]:
+                  - /url: /#faq
+          - generic [ref=e1010]:
+            - paragraph [ref=e1011]: Project
+            - list [ref=e1012]:
+              - listitem [ref=e1013]:
+                - link "About" [ref=e1014] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e1015]:
+                - link "GitHub" [ref=e1016] [cursor=pointer]:
+                  - /url: https://github.com/DanySued/roadmap
+              - listitem [ref=e1017]:
+                - link "Privacy" [ref=e1018] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=e1019]:
+                - link "Terms" [ref=e1020] [cursor=pointer]:
+                  - /url: /terms
+        - generic [ref=e1022]:
+          - link "Privacy Policy" [ref=e1023] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms of Service" [ref=e1024] [cursor=pointer]:
+            - /url: /terms
+          - generic [ref=e1025]: © 2026 FitPath — Built by Dany Sue
+      - link "fitpath" [ref=e1027] [cursor=pointer]:
+        - /url: /
