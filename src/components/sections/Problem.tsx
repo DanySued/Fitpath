@@ -1,8 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { fadeUp, stagger, EASE_OUT } from "@/lib/motion";
+import { motion, useInView, useReducedMotion } from "framer-motion";
+import { fadeUp, fadeUpReduced, stagger, EASE_OUT } from "@/lib/motion";
 
 const bars = [
   { label: "Week 1–2: Foundations", pct: 100, color: "rgba(170,168,255,0.9)", done: true },
@@ -20,6 +20,8 @@ const stats = [
 export default function Problem() {
   const barsRef = useRef<HTMLDivElement>(null);
   const barsInView = useInView(barsRef, { once: true, margin: "-100px" });
+  const prefersReduced = useReducedMotion();
+  const anim = prefersReduced ? fadeUpReduced : fadeUp;
 
   return (
     <section className="fp-section" style={{ background: "linear-gradient(180deg, var(--fp-black) 0%, var(--fp-surface) 72px)" }} id="learn">
@@ -32,11 +34,8 @@ export default function Problem() {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
           >
-            <motion.p className="fp-eyebrow" variants={fadeUp}>The problem</motion.p>
-            <motion.h2
-              className="fp-h2"
-              variants={fadeUp}
-            >
+            <motion.p className="fp-eyebrow" variants={anim}>The problem</motion.p>
+            <motion.h2 className="fp-h2" variants={anim}>
               Motivation isn&apos;t
               <br />
               <span style={{ fontStyle: "italic" }}>your problem.</span>
@@ -45,7 +44,7 @@ export default function Problem() {
             <motion.p
               className="mt-6 mb-10 leading-relaxed max-w-md"
               style={{ color: "var(--fp-text-muted)", fontSize: "0.9375rem" }}
-              variants={fadeUp}
+              variants={anim}
             >
               Most people quit not because they&apos;re lazy — but because there&apos;s no clear path.
               Structure beats motivation, every time.
@@ -53,7 +52,7 @@ export default function Problem() {
 
             <motion.div className="flex flex-col gap-5" variants={stagger(0.08, 0.1)}>
               {stats.map(({ value, label }) => (
-                <motion.div key={label} className="flex items-center gap-4" variants={fadeUp}>
+                <motion.div key={label} className="flex items-center gap-4" variants={anim}>
                   <motion.span
                     className="text-2xl font-bold shrink-0"
                     style={{ color: "var(--fp-accent)", fontFamily: "var(--font-instrument-serif)" }}
@@ -71,8 +70,8 @@ export default function Problem() {
           {/* Right: visual card */}
           <motion.div
             className="relative mt-4 lg:mt-0"
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, ...(prefersReduced ? {} : { x: 24 }) }}
+            whileInView={{ opacity: 1, ...(prefersReduced ? {} : { x: 0 }) }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, ease: EASE_OUT }}
           >
@@ -91,8 +90,8 @@ export default function Problem() {
                         {done && (
                           <motion.span
                             style={{ color: "var(--fp-green)", fontSize: 11 }}
-                            initial={{ opacity: 0, scale: 0 }}
-                            animate={barsInView ? { opacity: 1, scale: 1 } : {}}
+                            initial={{ opacity: 0, ...(prefersReduced ? {} : { scale: 0 }) }}
+                            animate={barsInView || prefersReduced ? { opacity: 1, ...(prefersReduced ? {} : { scale: 1 }) } : {}}
                             transition={{ delay: i * 0.12 + 0.6, type: "spring", stiffness: 400, damping: 18 }}
                           >
                             ✓
@@ -103,8 +102,8 @@ export default function Problem() {
                         <motion.div
                           className="h-full rounded-full"
                           style={{ backgroundColor: color, minWidth: "2.5rem" }}
-                          initial={{ width: 0 }}
-                          animate={barsInView ? { width: `${pct}%` } : { width: 0 }}
+                          initial={{ width: prefersReduced ? `${pct}%` : 0 }}
+                          animate={barsInView || prefersReduced ? { width: `${pct}%` } : { width: 0 }}
                           transition={{ duration: 0.75, delay: i * 0.12 + 0.2, ease: EASE_OUT }}
                         />
                       </div>
@@ -124,8 +123,8 @@ export default function Problem() {
             <motion.div
               className="absolute bottom-3 left-3 sm:-bottom-6 sm:-left-6 rounded-2xl p-5 shadow-xl max-w-[200px]"
               style={{ backgroundColor: "var(--fp-surface)", border: "1px solid var(--fp-border-2)", color: "var(--fp-text)" }}
-              initial={{ opacity: 0, y: 16, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              initial={{ opacity: 0, ...(prefersReduced ? {} : { y: 16, scale: 0.9 }) }}
+              whileInView={{ opacity: 1, ...(prefersReduced ? {} : { y: 0, scale: 1 }) }}
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 0.5, ease: EASE_OUT }}
               whileHover={{ y: -3, boxShadow: "0 12px 32px rgba(0,0,0,0.5)" }}

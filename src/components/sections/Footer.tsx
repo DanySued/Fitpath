@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { fadeUp, stagger, EASE_OUT } from "@/lib/motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { fadeUp, fadeUpReduced, stagger, EASE_OUT } from "@/lib/motion";
 
 const links: Record<string, { label: string; href: string }[]> = {
   Paths: [
@@ -34,6 +34,9 @@ const links: Record<string, { label: string; href: string }[]> = {
 const MotionLink = motion(Link);
 
 export default function Footer() {
+  const prefersReduced = useReducedMotion();
+  const anim = prefersReduced ? fadeUpReduced : fadeUp;
+
   return (
     <footer style={{ backgroundColor: "var(--fp-surface)" }}>
       {/* CTA band */}
@@ -46,7 +49,7 @@ export default function Footer() {
         viewport={{ once: true, margin: "-80px" }}
       >
         <div className="fp-container flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
-          <motion.div variants={fadeUp}>
+          <motion.div variants={anim}>
             <h2
               className="mb-3"
               style={{ fontSize: "clamp(2rem, 3.5vw, 2.5rem)", lineHeight: 1.1, color: "var(--fp-white)" }}
@@ -62,7 +65,7 @@ export default function Footer() {
             </p>
           </motion.div>
 
-          <motion.div variants={fadeUp}>
+          <motion.div variants={anim}>
             <MotionLink
               href="/paths"
               className="inline-flex items-center px-8 py-4 rounded-xl font-semibold shrink-0"
@@ -80,8 +83,8 @@ export default function Footer() {
       {/* Links */}
       <motion.div
         style={{ paddingBlock: "3rem" }}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, ...(prefersReduced ? {} : { y: 20 }) }}
+        whileInView={{ opacity: 1, ...(prefersReduced ? {} : { y: 0 }) }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.6, ease: EASE_OUT }}
       >

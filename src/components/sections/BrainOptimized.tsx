@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { motion, AnimatePresence, useInView } from "framer-motion";
-import { fadeUp, stagger, EASE_OUT } from "@/lib/motion";
+import { motion, AnimatePresence, useInView, useReducedMotion } from "framer-motion";
+import { fadeUp, fadeUpReduced, stagger, EASE_OUT } from "@/lib/motion";
 import { getIcon } from "@/components/fitpath/PathIcon";
 
 const tabs = [
@@ -51,6 +51,8 @@ export default function BrainOptimized() {
   const current = tabs.find((t) => t.id === active) ?? tabs[0];
   const barsRef = useRef<HTMLDivElement>(null);
   const barsInView = useInView(barsRef, { once: true, margin: "-80px" });
+  const prefersReduced = useReducedMotion();
+  const anim = prefersReduced ? fadeUpReduced : fadeUp;
 
   return (
     <section className="fp-section" style={{ background: "linear-gradient(180deg, var(--fp-surface) 0%, var(--fp-black) 72px)" }}>
@@ -61,11 +63,8 @@ export default function BrainOptimized() {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
         >
-          <motion.p className="fp-eyebrow" variants={fadeUp}>Why it works</motion.p>
-          <motion.h2
-            className="fp-h2 mb-10"
-            variants={fadeUp}
-          >
+          <motion.p className="fp-eyebrow" variants={anim}>Why it works</motion.p>
+          <motion.h2 className="fp-h2 mb-10" variants={anim}>
             Designed to keep{" "}
             <span style={{ fontStyle: "italic", color: "var(--fp-accent)" }}>you moving.</span>
           </motion.h2>
@@ -74,8 +73,8 @@ export default function BrainOptimized() {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Tabs */}
           <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, ...(prefersReduced ? {} : { x: -24 }) }}
+            whileInView={{ opacity: 1, ...(prefersReduced ? {} : { x: 0 }) }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, ease: EASE_OUT }}
           >
@@ -141,9 +140,9 @@ export default function BrainOptimized() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={current.id + "-stat"}
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
+                initial={{ opacity: 0, ...(prefersReduced ? {} : { y: 8 }) }}
+                animate={{ opacity: 1, ...(prefersReduced ? {} : { y: 0 }) }}
+                exit={{ opacity: 0, ...(prefersReduced ? {} : { y: -8 }) }}
                 transition={{ duration: 0.25, ease: EASE_OUT }}
                 className="flex flex-wrap items-baseline gap-3 px-6 py-4 rounded-2xl"
                 style={{ backgroundColor: "var(--fp-surface)" }}
@@ -163,9 +162,9 @@ export default function BrainOptimized() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={current.id}
-                initial={{ opacity: 0, y: 16, filter: "blur(4px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                exit={{ opacity: 0, y: -16, filter: "blur(4px)" }}
+                initial={{ opacity: 0, ...(prefersReduced ? {} : { y: 16, filter: "blur(4px)" }) }}
+                animate={{ opacity: 1, ...(prefersReduced ? {} : { y: 0, filter: "blur(0px)" }) }}
+                exit={{ opacity: 0, ...(prefersReduced ? {} : { y: -16, filter: "blur(4px)" }) }}
                 transition={{ duration: 0.3, ease: EASE_OUT }}
               >
                 <h3 className="text-2xl font-semibold mb-5 leading-snug" style={{ fontFamily: "var(--font-dm-sans)", color: "var(--fp-white)" }}>
@@ -182,8 +181,8 @@ export default function BrainOptimized() {
               ref={barsRef}
               className="mt-10 rounded-2xl p-6 overflow-hidden"
               style={{ backgroundColor: "var(--fp-surface)", border: "1px solid var(--fp-border)" }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, ...(prefersReduced ? {} : { y: 20 }) }}
+              whileInView={{ opacity: 1, ...(prefersReduced ? {} : { y: 0 }) }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, ease: EASE_OUT, delay: 0.2 }}
             >
@@ -203,8 +202,8 @@ export default function BrainOptimized() {
                           background: pct === 100 ? "var(--fp-green)" : "var(--fp-accent)",
                           borderRadius: 4,
                         }}
-                        initial={{ width: 0 }}
-                        animate={barsInView ? { width: pct > 0 ? `${pct}%` : "4px" } : { width: 0 }}
+                        initial={{ width: prefersReduced ? (pct > 0 ? `${pct}%` : "4px") : 0 }}
+                        animate={barsInView || prefersReduced ? { width: pct > 0 ? `${pct}%` : "4px" } : { width: 0 }}
                         transition={{ duration: 0.7, delay: i * 0.1 + 0.3, ease: EASE_OUT }}
                       />
                     </div>

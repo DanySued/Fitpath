@@ -13,6 +13,11 @@ export const fadeUp = {
   },
 };
 
+export const fadeUpReduced = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.2 } },
+};
+
 export const fadeIn = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { duration: 0.5, ease: EASE_OUT } },

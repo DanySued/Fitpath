@@ -1,8 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { fadeUp, stagger, EASE_OUT } from "@/lib/motion";
+import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from "framer-motion";
+import { fadeUp, fadeUpReduced, stagger, EASE_OUT } from "@/lib/motion";
 
 const testimonials = [
   {
@@ -54,6 +54,9 @@ function TiltCard({ children }: { children: React.ReactNode }) {
 }
 
 export default function Research() {
+  const prefersReduced = useReducedMotion();
+  const anim = prefersReduced ? fadeUpReduced : fadeUp;
+
   return (
     <section className="fp-section" style={{ background: "linear-gradient(180deg, var(--fp-black) 0%, var(--fp-surface) 72px)" }}>
       <div className="fp-container">
@@ -65,10 +68,10 @@ export default function Research() {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
           >
-            <motion.p className="fp-eyebrow" variants={fadeUp}>From the community</motion.p>
+            <motion.p className="fp-eyebrow" variants={anim}>From the community</motion.p>
             <motion.h2
               className="fp-h2"
-              variants={fadeUp}
+              variants={anim}
             >
               People who
               <br />
@@ -78,7 +81,7 @@ export default function Research() {
             <motion.p
               className="mt-6 leading-relaxed max-w-sm"
               style={{ color: "var(--fp-text-muted)", fontSize: "0.9375rem" }}
-              variants={fadeUp}
+              variants={anim}
             >
               Not willpower. Not motivation. Just steps you can follow.
             </motion.p>
@@ -91,7 +94,7 @@ export default function Research() {
                 { value: "89%", label: "finish at least 3 stages" },
                 { value: "4.8★", label: "avg. community rating" },
               ].map(({ value, label }) => (
-                <motion.div key={label} variants={fadeUp}>
+                <motion.div key={label} variants={anim}>
                   <p className="text-2xl font-light" style={{ fontFamily: "var(--font-instrument-serif)", color: "var(--fp-accent)" }}>{value}</p>
                   <p className="text-xs mt-1" style={{ color: "var(--fp-text-muted)" }}>{label}</p>
                 </motion.div>
@@ -108,7 +111,7 @@ export default function Research() {
             viewport={{ once: true, margin: "-60px" }}
           >
             {testimonials.map((t) => (
-              <motion.div key={t.handle} variants={fadeUp}>
+              <motion.div key={t.handle} variants={anim}>
                 <TiltCard>
                   <div
                     className="rounded-2xl p-6"

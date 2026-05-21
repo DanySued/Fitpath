@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { fadeUp, stagger, EASE_OUT } from "@/lib/motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { fadeUp, fadeUpReduced, stagger, EASE_OUT } from "@/lib/motion";
 
 const faqs = [
   {
@@ -29,6 +29,8 @@ const faqs = [
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
+  const prefersReduced = useReducedMotion();
+  const anim = prefersReduced ? fadeUpReduced : fadeUp;
 
   return (
     <section className="fp-section" style={{ backgroundColor: "var(--fp-black)" }} id="faq">
@@ -39,10 +41,10 @@ export default function FAQ() {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
         >
-          <motion.p className="fp-eyebrow" variants={fadeUp}>FAQ</motion.p>
+          <motion.p className="fp-eyebrow" variants={anim}>FAQ</motion.p>
           <motion.h2
             className="fp-h2 mb-12"
-            variants={fadeUp}
+            variants={anim}
           >
             Questions
             <br />
@@ -58,7 +60,7 @@ export default function FAQ() {
           viewport={{ once: true, margin: "-60px" }}
         >
           {faqs.map((item, i) => (
-            <motion.div key={i} style={{ borderTop: "1px solid var(--fp-border)" }} variants={fadeUp}>
+            <motion.div key={i} style={{ borderTop: "1px solid var(--fp-border)" }} variants={anim}>
               <button
                 className="w-full flex items-center justify-between py-6 text-left gap-8 rounded-lg -mx-4 px-4 hover:bg-white/[0.03] transition-colors duration-150"
                 onClick={() => setOpen(open === i ? null : i)}

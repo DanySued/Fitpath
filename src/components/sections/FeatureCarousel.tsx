@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { fadeUp, stagger, EASE_OUT } from "@/lib/motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { fadeUp, fadeUpReduced, stagger, EASE_OUT } from "@/lib/motion";
 import { getIcon } from "@/components/fitpath/PathIcon";
 
 const features = [
@@ -40,6 +40,9 @@ const features = [
 ];
 
 export default function FeatureCarousel() {
+  const prefersReduced = useReducedMotion();
+  const anim = prefersReduced ? fadeUpReduced : fadeUp;
+
   return (
     <section
       className="fp-section"
@@ -53,10 +56,10 @@ export default function FeatureCarousel() {
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
       >
-        <motion.p className="fp-eyebrow" variants={fadeUp}>How it works</motion.p>
+        <motion.p className="fp-eyebrow" variants={anim}>How it works</motion.p>
         <motion.h2
           className="fp-h2"
-          variants={fadeUp}
+          variants={anim}
         >
           Four tools.{" "}
           <span style={{ fontStyle: "italic", color: "var(--fp-accent)" }}>
@@ -78,7 +81,7 @@ export default function FeatureCarousel() {
             <motion.div
               key={f.tag}
               className="group"
-              variants={fadeUp}
+              variants={anim}
               style={{
                 background: "var(--fp-black)",
                 border: "1px solid var(--fp-border)",

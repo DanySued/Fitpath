@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Link from "next/link";
 import { motion, useMotionValue, useSpring, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import { EASE_OUT, fadeUp, stagger } from "@/lib/motion";
+import { EASE_OUT, fadeUp, fadeUpReduced, stagger } from "@/lib/motion";
 
 const headlineBase: React.CSSProperties = {
   fontSize: "clamp(3rem, 5.6vw, 4rem)",
@@ -20,6 +20,7 @@ const MotionLink = motion(Link);
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
   const prefersReduced = useReducedMotion();
+  const anim = prefersReduced ? fadeUpReduced : fadeUp;
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -84,7 +85,7 @@ export default function Hero() {
           className="flex flex-col items-center"
         >
           {/* Eyebrow pill */}
-          <motion.div variants={fadeUp} className="mb-8">
+          <motion.div variants={anim} className="mb-8">
             <span
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium"
               style={{
@@ -98,23 +99,23 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          <motion.span className="block" style={headlineBase} variants={fadeUp}>
+          <motion.span className="block" style={headlineBase} variants={anim}>
             Train with purpose.
           </motion.span>
-          <motion.span className="block mb-6" style={{ ...headlineBase, fontStyle: "italic" }} variants={fadeUp}>
+          <motion.span className="block mb-6" style={{ ...headlineBase, fontStyle: "italic" }} variants={anim}>
             Progress with clarity.
           </motion.span>
 
           <motion.p
             className="mb-10 max-w-sm leading-relaxed"
             style={{ fontSize: "0.9375rem", color: "var(--fp-text-muted)" }}
-            variants={fadeUp}
+            variants={anim}
           >
             Pick a goal. Follow the stages. Skip the guesswork.
           </motion.p>
 
           <motion.div style={{ y: ctaY }} className="flex flex-col items-center w-full">
-            <motion.div className="flex flex-col sm:flex-row items-center gap-4" variants={fadeUp}>
+            <motion.div className="flex flex-col sm:flex-row items-center gap-4" variants={anim}>
               <MotionLink
                 href="/paths"
                 className="inline-flex items-center px-8 py-3.5 text-sm font-semibold rounded-xl"
@@ -147,7 +148,7 @@ export default function Hero() {
             <motion.p
               className="mt-6 text-xs"
               style={{ color: "var(--fp-text-muted)" }}
-              variants={fadeUp}
+              variants={anim}
             >
               Free · No account · Progress saved locally
             </motion.p>
@@ -155,7 +156,7 @@ export default function Hero() {
             <motion.div
               className="flex flex-wrap justify-center items-center gap-6 mt-16 pt-8"
               style={{ borderTop: "1px solid var(--fp-border)" }}
-              variants={fadeUp}
+              variants={anim}
             >
               {[
                 { label: "Training paths", value: "24+" },
