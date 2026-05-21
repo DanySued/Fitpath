@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { fadeUp, fadeUpReduced, stagger, EASE_OUT } from "@/lib/motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { stagger, EASE_OUT, useAnimVariant } from "@/lib/motion";
 
 const faqs = [
   {
@@ -29,8 +29,7 @@ const faqs = [
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
-  const prefersReduced = useReducedMotion();
-  const anim = prefersReduced ? fadeUpReduced : fadeUp;
+  const { anim } = useAnimVariant();
 
   return (
     <section className="fp-section" style={{ backgroundColor: "var(--fp-black)" }} id="faq">

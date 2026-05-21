@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
-import { fadeUp, fadeUpReduced, stagger, EASE_OUT } from "@/lib/motion";
+import { motion } from "framer-motion";
+import { stagger, EASE_OUT, useAnimVariant } from "@/lib/motion";
 
 const links: Record<string, { label: string; href: string }[]> = {
   Paths: [
@@ -34,8 +34,7 @@ const links: Record<string, { label: string; href: string }[]> = {
 const MotionLink = motion(Link);
 
 export default function Footer() {
-  const prefersReduced = useReducedMotion();
-  const anim = prefersReduced ? fadeUpReduced : fadeUp;
+  const { anim, prefersReduced } = useAnimVariant();
 
   return (
     <footer style={{ backgroundColor: "var(--fp-surface)" }}>

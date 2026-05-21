@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
-import { fadeUp, fadeUpReduced, stagger, EASE_OUT } from "@/lib/motion";
+import { motion } from "framer-motion";
+import { stagger, EASE_OUT, useAnimVariant } from "@/lib/motion";
 import { getIcon } from "@/components/fitpath/PathIcon";
 
 const features = [
@@ -40,8 +40,7 @@ const features = [
 ];
 
 export default function FeatureCarousel() {
-  const prefersReduced = useReducedMotion();
-  const anim = prefersReduced ? fadeUpReduced : fadeUp;
+  const { anim } = useAnimVariant();
 
   return (
     <section

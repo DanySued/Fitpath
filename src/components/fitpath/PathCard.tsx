@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import PathIcon from "./PathIcon";
+import { EASE_OUT } from "@/lib/motion";
 import type { Path } from "@/lib/data/paths";
 
 export default function PathCard({ path }: { path: Path }) {
@@ -23,7 +24,7 @@ export default function PathCard({ path }: { path: Path }) {
           boxShadow: "0 16px 48px rgba(0,0,0,0.4)",
         },
       }}
-      transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.22, ease: EASE_OUT }}
       style={{
         background: "var(--fp-surface)",
         border: "1px solid var(--fp-border)",
@@ -32,13 +33,12 @@ export default function PathCard({ path }: { path: Path }) {
         position: "relative",
       }}
     >
-      {/* Subtle top accent line */}
-      <motion.div
+<motion.div
         variants={{
           rest: { scaleX: 0, opacity: 0 },
           hover: { scaleX: 1, opacity: 1 },
         }}
-        transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.25, ease: EASE_OUT }}
         style={{
           position: "absolute",
           top: 0,
@@ -55,8 +55,7 @@ export default function PathCard({ path }: { path: Path }) {
         href={`/paths/${path.id}`}
         style={{ display: "block", padding: "32px 28px 28px", textDecoration: "none" }}
       >
-        {/* Icon */}
-        <motion.div
+<motion.div
           variants={{
             rest: { scale: 1 },
             hover: { scale: 1.1 },
@@ -78,8 +77,7 @@ export default function PathCard({ path }: { path: Path }) {
           <PathIcon name={path.icon} size={28} strokeWidth={1.5} />
         </motion.div>
 
-        {/* Title + badges */}
-        <div style={{ textAlign: "center", marginBottom: 10 }}>
+<div style={{ textAlign: "center", marginBottom: 10 }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 7, marginBottom: 4 }}>
             <h3 style={{
               fontSize: 16,
@@ -100,7 +98,7 @@ export default function PathCard({ path }: { path: Path }) {
                   fontWeight: 700,
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
-                  color: "#4ade80",
+                  color: "var(--fp-lime)",
                   background: "rgba(74,222,128,0.12)",
                   border: "1px solid rgba(74,222,128,0.3)",
                   borderRadius: 4,
@@ -130,8 +128,7 @@ export default function PathCard({ path }: { path: Path }) {
           </div>
         </div>
 
-        {/* Description */}
-        <p style={{
+<p style={{
           fontSize: 13,
           color: "var(--fp-text-muted)",
           lineHeight: 1.6,
@@ -141,8 +138,7 @@ export default function PathCard({ path }: { path: Path }) {
           {path.desc}
         </p>
 
-        {/* CTA */}
-        <motion.div
+<motion.div
           variants={{
             rest: { opacity: 0.4 },
             hover: { opacity: 1 },

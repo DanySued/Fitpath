@@ -104,6 +104,8 @@
   --fp-purple:     #c1cff8;   /* ns-periwinckle */
   --fp-blush:      #fad0f3;
   --fp-yellow:     #fffba5;
+  --fp-lime:       #4ade80;
+  --fp-error:      #f87171;
   --fp-text:       rgba(255,255,255,0.81);
   --fp-text-muted: rgba(255,255,255,0.45);
   --fp-border:     rgba(255,255,255,0.08);

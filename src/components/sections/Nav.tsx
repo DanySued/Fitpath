@@ -62,7 +62,6 @@ export default function Nav() {
       transition={{ duration: 0.35, ease: EASE_OUT }}
     >
       <div className="fp-container flex items-center justify-between h-16">
-        {/* Logo */}
         <MotionLink
           href="/"
           className="flex items-center gap-2.5"
@@ -91,7 +90,6 @@ export default function Nav() {
           </span>
         </MotionLink>
 
-        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
             <MotionLink
@@ -127,7 +125,6 @@ export default function Nav() {
           ))}
         </nav>
 
-        {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
           {!isLoading && (
@@ -180,7 +177,7 @@ export default function Nav() {
                         <LayoutDashboard size={14} color="var(--fp-text-muted)" />
                         Dashboard
                       </Link>
-                      <button onClick={handleLogout} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 12px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "#f87171", background: "transparent", border: "none", cursor: "pointer", width: "100%", textAlign: "left", transition: "background 0.15s", fontFamily: "var(--font-dm-sans), sans-serif" }}
+                      <button onClick={handleLogout} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 12px", borderRadius: 8, fontSize: 13, fontWeight: 500, color: "var(--fp-error)", background: "transparent", border: "none", cursor: "pointer", width: "100%", textAlign: "left", transition: "background 0.15s", fontFamily: "var(--font-dm-sans), sans-serif" }}
                         onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(239,68,68,0.06)")}
                         onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
                       >
@@ -217,7 +214,6 @@ export default function Nav() {
           )}
         </div>
 
-        {/* Mobile hamburger */}
         <motion.button
           className="md:hidden p-2 -mr-2"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -245,7 +241,6 @@ export default function Nav() {
         </motion.button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -276,7 +271,7 @@ export default function Nav() {
                 user ? (
                   <>
                     <Link href="/dashboard" className="text-base font-medium" style={{ color: "var(--fp-text)" }} onClick={() => setMenuOpen(false)}>Dashboard</Link>
-                    <button onClick={() => { handleLogout(); setMenuOpen(false); }} style={{ textAlign: "left", fontSize: 16, fontWeight: 500, color: "#f87171", background: "none", border: "none", cursor: "pointer", fontFamily: "var(--font-dm-sans), sans-serif", padding: 0 }}>
+                    <button onClick={() => { handleLogout(); setMenuOpen(false); }} style={{ textAlign: "left", fontSize: 16, fontWeight: 500, color: "var(--fp-error)", background: "none", border: "none", cursor: "pointer", fontFamily: "var(--font-dm-sans), sans-serif", padding: 0 }}>
                       Sign out
                     </button>
                   </>

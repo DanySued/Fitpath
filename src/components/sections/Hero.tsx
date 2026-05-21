@@ -2,8 +2,8 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { motion, useMotionValue, useSpring, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import { EASE_OUT, fadeUp, fadeUpReduced, stagger } from "@/lib/motion";
+import { motion, useMotionValue, useSpring, useScroll, useTransform } from "framer-motion";
+import { EASE_OUT, stagger, useAnimVariant } from "@/lib/motion";
 
 const headlineBase: React.CSSProperties = {
   fontSize: "clamp(3rem, 5.6vw, 4rem)",
@@ -19,8 +19,7 @@ const MotionLink = motion(Link);
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
-  const prefersReduced = useReducedMotion();
-  const anim = prefersReduced ? fadeUpReduced : fadeUp;
+  const { anim, prefersReduced } = useAnimVariant();
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -37,7 +36,6 @@ export default function Hero() {
   const ctaY         = useTransform(ctaYRaw,     v => prefersReduced ? 0 : v);
   const contentOpacity = useTransform(opacityRaw, v => prefersReduced ? 1 : v);
 
-  // Magnetic button
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
   const sx = useSpring(mx, { stiffness: 500, damping: 32 });
@@ -84,7 +82,6 @@ export default function Hero() {
           animate="visible"
           className="flex flex-col items-center"
         >
-          {/* Eyebrow pill */}
           <motion.div variants={anim} className="mb-8">
             <span
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium"

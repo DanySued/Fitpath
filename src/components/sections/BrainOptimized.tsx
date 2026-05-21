@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { motion, AnimatePresence, useInView, useReducedMotion } from "framer-motion";
-import { fadeUp, fadeUpReduced, stagger, EASE_OUT } from "@/lib/motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import { stagger, EASE_OUT, useAnimVariant } from "@/lib/motion";
 import { getIcon } from "@/components/fitpath/PathIcon";
 
 const tabs = [
@@ -51,8 +51,7 @@ export default function BrainOptimized() {
   const current = tabs.find((t) => t.id === active) ?? tabs[0];
   const barsRef = useRef<HTMLDivElement>(null);
   const barsInView = useInView(barsRef, { once: true, margin: "-80px" });
-  const prefersReduced = useReducedMotion();
-  const anim = prefersReduced ? fadeUpReduced : fadeUp;
+  const { anim, prefersReduced } = useAnimVariant();
 
   return (
     <section className="fp-section" style={{ background: "linear-gradient(180deg, var(--fp-surface) 0%, var(--fp-black) 72px)" }}>

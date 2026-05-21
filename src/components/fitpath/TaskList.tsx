@@ -88,7 +88,6 @@ export default function TaskList({ pathId, pathDetail }: { pathId: string; pathD
 
   return (
     <div style={{ position: "relative" }}>
-      {/* Progress bar */}
       <div style={{ marginBottom: 32 }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
           <span style={{ fontSize: 13, color: "var(--fp-text-muted)", fontWeight: 500 }}>
@@ -124,7 +123,6 @@ export default function TaskList({ pathId, pathDetail }: { pathId: string; pathD
         </AnimatePresence>
       </div>
 
-      {/* Task list */}
       <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
         {pathDetail.tasks.map((task, i) => {
           const done = completed.includes(task.id);
@@ -158,7 +156,6 @@ export default function TaskList({ pathId, pathDetail }: { pathId: string; pathD
                 width: "100%",
               }}
             >
-              {/* Step number / check */}
               <motion.div
                 animate={{
                   background: done ? "var(--fp-green)" : "var(--fp-surface-2)",
@@ -235,7 +232,6 @@ export default function TaskList({ pathId, pathDetail }: { pathId: string; pathD
         })}
       </div>
 
-      {/* Toast */}
       <AnimatePresence>
         {toast && (
           <motion.div

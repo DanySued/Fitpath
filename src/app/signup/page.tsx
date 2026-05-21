@@ -219,7 +219,7 @@ export default function SignupPage() {
                 border: "1px solid rgba(239,68,68,0.2)",
                 borderRadius: 10,
                 fontSize: 13,
-                color: "#f87171",
+                color: "var(--fp-error)",
               }}
             >
               {error}

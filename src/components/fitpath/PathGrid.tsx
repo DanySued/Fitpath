@@ -39,9 +39,7 @@ export default function PathGrid() {
 
   return (
     <div>
-      {/* Search + filters */}
       <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center", marginBottom: 32 }}>
-        {/* Search input */}
         <motion.div
           style={{ position: "relative", flex: "1 1 260px", maxWidth: 440 }}
           initial={{ opacity: 0, y: 12 }}
@@ -80,7 +78,6 @@ export default function PathGrid() {
           </span>
         </motion.div>
 
-        {/* Category tabs with sliding indicator */}
         <motion.div
           style={{ display: "flex", gap: 6, flexWrap: "wrap" }}
           initial={{ opacity: 0, y: 12 }}
@@ -131,7 +128,6 @@ export default function PathGrid() {
         </motion.div>
       </div>
 
-      {/* Results count */}
       <AnimatePresence mode="wait">
         {query && (
           <motion.p
@@ -147,7 +143,6 @@ export default function PathGrid() {
         )}
       </AnimatePresence>
 
-      {/* Grid */}
       {filteredPaths.length > 0 ? (
         <motion.div
           style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 340px), 1fr))", gap: 20 }}

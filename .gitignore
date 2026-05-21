@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Windows metadata
+desktop.ini
+
+# Root-level screenshot artifacts
+/*.png
+/*.jpg
+/*.jpeg
+
+# Scratch / notes files
+Untitled-*.md
